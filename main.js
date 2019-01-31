@@ -1,47 +1,17 @@
-/**
- * My API Sandbox
- * 
- */
+var metadata = require('./routes/metadata.js')
 
-// A basic route returning a canned response
-Sandbox.define('/hello', 'get', function(req, res) {
-    // send 'Hello world' response
-    res.send('Hello world');
-});
-
-
-// Using stateful behaviour to simulate creating users
-Sandbox.define('/users', 'POST', function(req, res) {
-    // retrieve users or, if there are none, init to empty array
-    state.users = state.users || [];
-    
-    // persist user by adding to the state object
-    state.users.push(req.body);
-
-    return res.json({status: "ok"});
-});
-
-// Using stateful behaviour to simulate getting all users
-Sandbox.define('/users', 'GET', function(req, res) {
-    // retrieve users or, if there are none init, to empty array
-    state.users = state.users || [];
-
-    return res.json(state.users);
-});
-
-// Using named route parameters to simulate getting a specific user
-Sandbox.define('/users/{username}', 'GET', function(req, res) {
-    // retrieve users or, if there are none, init to empty array
-    state.users = state.users || [];
-
-    // route param {username} is available on req.params
-    var username = req.params.username;
-
-    // log it to the console
-    console.log("Getting user " + username + " details");
-
-    // use lodash to find the user in the array
-    var user = _.find(state.users, { "username": username});
-    
-    return res.json(user);
-});
+Sandbox.define('/metadata/likelihood-to-land/','GET', metadata.likelihoodToLand)
+Sandbox.define('/metadata/export-experience-category/','GET', metadata.exportExperienceCategory)
+Sandbox.define('/metadata/investment-investor-type/','GET', metadata.investmentInvestorType)
+Sandbox.define('/metadata/investment-involvement/','GET', metadata.investmentInvolvement)
+Sandbox.define('/metadata/investment-specific-programme/','GET', metadata.investmentSpecificProgramme)
+Sandbox.define('/metadata/investment-project-stage/','GET', metadata.investmentProjectStage)
+Sandbox.define('/metadata/investment-business-activity/','GET', metadata.investmentBusinessActivity)
+Sandbox.define('/metadata/investment-type/','GET', metadata.investmentType)
+Sandbox.define('/metadata/investment-strategic-driver/','GET', metadata.investmentStrategicDriver)
+Sandbox.define('/metadata/order-service-type/','GET', metadata.orderServiceType)
+Sandbox.define('/metadata/order-cancellation-reason/','GET', metadata.orderCancellationReason)
+Sandbox.define('/metadata/omis-market/','GET', metadata.omisMarket)
+Sandbox.define('/metadata/salary-range/','GET', metadata.salaryRange)
+Sandbox.define('/metadata/fdi-value/','GET', metadata.fdiValue)
+Sandbox.define('/metadata/fdi-type/','GET', metadata.fdiType)
