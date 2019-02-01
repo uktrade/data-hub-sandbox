@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "42b8d11b-dbe7-45b8-985e-c9222c459287",
         "name": "Assembly",
@@ -70,5 +69,4 @@
         "name": "Shared service centre",
         "disabled_on": null
     }
-  ]
-}
+]

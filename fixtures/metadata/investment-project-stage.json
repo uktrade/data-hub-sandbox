@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "8a320cc9-ae2e-443e-9d26-2f36452c2ced",
         "name": "Prospect",
@@ -30,5 +29,4 @@
         "disabled_on": null,
         "exclude_from_investment_flow": false
     }
-  ]
-}
+]

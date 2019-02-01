@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "38e36c77-61ad-4186-a7a8-ac6a1a1104c6",
         "name": "Higher",
@@ -15,5 +14,4 @@
         "name": "Standard",
         "disabled_on": null
     }
-  ]
-}
+]

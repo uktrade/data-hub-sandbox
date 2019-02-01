@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "6513f918-4263-4516-8abb-8e4a6a4de857",
         "name": "Advanced Engineering Supply Chain",
@@ -125,5 +124,4 @@
         "name": "Venture / Equity Capital",
         "disabled_on": null
     }
-  ]
-}
+]

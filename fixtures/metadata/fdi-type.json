@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "ac035522-ad0b-4eeb-87f4-0ce964e4b104",
         "name": "Acquisition",
@@ -35,5 +34,4 @@
         "name": "Retention",
         "disabled_on": null
     }
-  ]
-}
+]
