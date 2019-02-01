@@ -13,6 +13,27 @@ var omisMarket = require('../fixtures/metadata/omis-market.json')
 var fdiValue = require('../fixtures/metadata/fdi-value.json')
 var fdiType = require('../fixtures/metadata/fdi-type.json')
 var salaryRange = require('../fixtures/metadata/salary-range.json')
+var turnover = require('../fixtures/metadata/turnover.json')
+var sector = require('../fixtures/metadata/sector.json')
+var sectorLte0 = require('../fixtures/metadata/sector-lte0.json')
+var locationType = require('../fixtures/metadata/location-type.json')
+var eventType = require('../fixtures/metadata/event-type.json')
+var programme = require('../fixtures/metadata/programme.json')
+var businessType = require('../fixtures/metadata/business-type.json')
+var evidenceTag = require('../fixtures/metadata/evidence-tag.json')
+var employeeRange = require('../fixtures/metadata/employee-range.json')
+var country = require('../fixtures/metadata/country.json')
+var ukRegion = require('../fixtures/metadata/uk-region.json')
+var referralSourceWebsite = require('../fixtures/metadata/referral-source-website.json')
+var referralSourceMarketing = require('../fixtures/metadata/referral-source-marketing.json')
+var referralSourceActivity = require('../fixtures/metadata/referral-source-activity.json')
+var headquarterType = require('../fixtures/metadata/headquarter-type.json')
+var service = require('../fixtures/metadata/service.json')
+var serviceWithInteraction = require('../fixtures/metadata/service-with-interaction.json')
+var communicationChannel = require('../fixtures/metadata/communication-channel.json')
+var team = require('../fixtures/metadata/team.json')
+var policyArea = require('../fixtures/metadata/policy-area.json')
+var policyIssueType = require('../fixtures/metadata/policy-issue-type.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -72,4 +93,86 @@ exports.fdiType = function (req, res) {
 
 exports.salaryRange = function (req, res) {
   res.json(salaryRange)
+}
+
+exports.turnover = function (req, res) {
+  res.json(turnover)
+}
+
+exports.sector = function (req, res) {
+  if(req.query.level__lte == '0') {
+    return res.json(sectorLte0)
+  }
+  res.json(sector)
+}
+
+exports.locationType = function (req, res) {
+  res.json(locationType)
+}
+
+exports.eventType = function (req, res) {
+  res.json(eventType)
+}
+
+exports.programme = function (req, res) {
+  res.json(programme)
+}
+
+exports.businessType = function (req, res) {
+  res.json(businessType)
+}
+
+exports.evidenceTag = function (req, res) {
+  res.json(evidenceTag)
+}
+
+exports.employeeRange = function (req, res) {
+  res.json(employeeRange)
+}
+
+exports.country = function (req, res) {
+  res.json(country)
+}
+
+exports.ukRegion = function (req, res) {
+  res.json(ukRegion)
+}
+
+exports.referralSourceWebsite = function (req, res) {
+  res.json(referralSourceWebsite)
+}
+
+exports.referralSourceMarketing = function (req, res) {
+  res.json(referralSourceMarketing)
+}
+
+exports.referralSourceActivity = function (req, res) {
+  res.json(referralSourceActivity)
+}
+
+exports.headquarterType = function (req, res) {
+  res.json(headquarterType)
+}
+
+exports.service = function (req, res) {
+  if(req.query.contexts__has_any == 'interaction') {
+    return res.json(serviceWithInteraction)  
+  }
+  res.json(service)
+}
+
+exports.communicationChannel = function (req, res) {
+  res.json(communicationChannel)
+}
+
+exports.team = function (req, res) {
+  res.json(team)
+}
+
+exports.policyArea = function (req, res) {
+  res.json(policyArea)
+}
+
+exports.policyIssueType = function (req, res) {
+  res.json(policyIssueType)
 }

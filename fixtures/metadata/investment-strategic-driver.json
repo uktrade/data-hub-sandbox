@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "a2cef09f-cdbb-4eae-b191-0391260af9ad",
         "name": "Access to clients",
@@ -50,5 +49,4 @@
         "name": "Technology seeking",
         "disabled_on": null
     }
-  ]
-}
+]

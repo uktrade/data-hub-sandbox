@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "71cf220a-1e1d-46dd-94ad-f4829859253d",
         "name": "FDI Hub + HQ",
@@ -120,5 +119,4 @@
         "name": "Region Only",
         "disabled_on": null
     }
-  ]
-}
+]

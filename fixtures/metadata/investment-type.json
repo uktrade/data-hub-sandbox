@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "031269ab-b7ec-40e9-8a4e-7371404f0622",
         "name": "Commitment to invest",
@@ -15,5 +14,4 @@
         "name": "Non-FDI",
         "disabled_on": null
     }
-  ]
-}
+]

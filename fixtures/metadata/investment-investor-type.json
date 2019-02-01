@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "40e33f91-f565-4b89-8e18-cfefae192245",
         "name": "Existing Investor",
@@ -10,5 +9,4 @@
         "name": "New Investor",
         "disabled_on": null
     }
-  ]
-}
+]

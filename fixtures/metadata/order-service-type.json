@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "22fc9edd-41a5-4182-ba4e-baacc681d5f7",
         "name": "Activity relating to a high value campaign",
@@ -75,5 +74,4 @@
         "name": "Retainer",
         "disabled_on": "2017-10-24T11:00:00Z"
     }
-  ]
-}
+]
