@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "934cd12a-6095-e211-a939-e4115bead28a",
         "name": "Alderney",
@@ -115,5 +114,4 @@
         "name": "Yorkshire and The Humber",
         "disabled_on": null
     }
-  ]
-}
+]

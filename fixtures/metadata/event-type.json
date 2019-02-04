@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "85f2f48f-0ecb-4a3a-b7d2-8106b8733769",
         "name": "Account management",
@@ -50,5 +49,4 @@
         "name": "UK region local service",
         "disabled_on": null
     }
-  ]
-}
+]

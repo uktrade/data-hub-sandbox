@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "87756b9a-5d95-e211-a939-e4115bead28a",
         "name": "Afghanistan",
@@ -1250,5 +1249,4 @@
         "name": "Zimbabwe",
         "disabled_on": null
     }
-  ]
-}
+]

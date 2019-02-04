@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "6fbb9fc6-5f95-e211-a939-e4115bead28a",
         "name": "Aftercare",
@@ -240,5 +239,4 @@
         "name": "Website",
         "disabled_on": null
     }
-  ]
-}
+]

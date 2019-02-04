@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "b71fa81c-0c22-44c6-ab6f-13b9e045dc10",
         "name": "HQ",
@@ -20,5 +19,4 @@
         "name": "Regional network",
         "disabled_on": null
     }
-  ]
-}
+]

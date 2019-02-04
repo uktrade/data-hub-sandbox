@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "af959812-6095-e211-a939-e4115bead28a",
         "name": "Advanced Engineering",
@@ -2681,5 +2680,4 @@
         "level": 0,
         "disabled_on": null
     }
-  ]
-}
+]

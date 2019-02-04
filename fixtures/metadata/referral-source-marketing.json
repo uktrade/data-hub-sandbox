@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "3be91b40-6c5a-466c-a217-01b028701c08",
         "name": "Email",
@@ -35,5 +34,4 @@
         "name": "Television/radio",
         "disabled_on": null
     }
-  ]
-}
+]

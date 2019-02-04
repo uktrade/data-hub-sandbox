@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "73023b55-9568-4e3f-a134-53ec58451d3f",
         "name": "Export growth",
@@ -30,5 +29,4 @@
         "name": "Reactive",
         "disabled_on": null
     }
-  ]
-}
+]

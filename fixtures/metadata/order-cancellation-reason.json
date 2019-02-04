@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "fce5a84b-c7ef-e311-8a2b-e4115bead28a",
         "name": "Company not eligible for support from DIT",
@@ -60,5 +59,4 @@
         "name": "Other",
         "disabled_on": "2017-10-24T11:00:00Z"
     }
-  ]
-}
+]

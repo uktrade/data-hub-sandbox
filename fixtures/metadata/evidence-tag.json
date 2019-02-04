@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "d5145304-cacd-47ec-b808-4306a151b7d5",
         "name": "Check A - FDI eligibility: 10% ownership of UK company",
@@ -125,5 +124,4 @@
         "name": "Check D - Value categorisation: Total investment value",
         "disabled_on": null
     }
-  ]
-}
+]

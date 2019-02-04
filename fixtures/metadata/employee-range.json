@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "3dafd8d0-5d95-e211-a939-e4115bead28a",
         "name": "1 to 9",
@@ -25,5 +24,4 @@
         "name": "500+",
         "disabled_on": null
     }
-  ]
-}
+]

@@ -1,5 +1,4 @@
-{
-  "result": [
+[
     {
         "id": "e2a8be20-7a54-e311-a33a-e4115bead28a",
         "name": "Aid Funded Business Service (AFBS)",
@@ -140,5 +139,4 @@
         "name": "Web Based Exporting",
         "disabled_on": null
     }
-  ]
-}
+]

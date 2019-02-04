@@ -1,5 +1,9 @@
 var metadata = require('./routes/metadata.js')
+var user = require('./routes/whoami.js')
+var v3 = require('./routes/v3.js')
+var dashboard = require('./routes/dashboard.js')
 
+// Metadata endpoint
 Sandbox.define('/metadata/likelihood-to-land/','GET', metadata.likelihoodToLand)
 Sandbox.define('/metadata/export-experience-category/','GET', metadata.exportExperienceCategory)
 Sandbox.define('/metadata/investment-investor-type/','GET', metadata.investmentInvestorType)
@@ -32,3 +36,16 @@ Sandbox.define('/metadata/headquarter-type/','GET', metadata.headquarterType)
 Sandbox.define('/metadata/service/','GET', metadata.service)
 Sandbox.define('/metadata/communication-channel/','GET', metadata.communicationChannel)
 Sandbox.define('/metadata/team/','GET', metadata.team)
+
+// Whoami endpoint
+Sandbox.define('/whoami/','GET', user.whoami)
+
+
+// V3 endpoint
+Sandbox.define('/v3/feature-flag','GET', v3.featureFlag)
+Sandbox.define('/v3/company/*','GET', v3.company)
+Sandbox.define('/v3/interaction/','GET', v3.interaction)
+
+
+// Dashboard endpoint
+Sandbox.define('/dashboard/homepage/','GET', dashboard.homePage)
