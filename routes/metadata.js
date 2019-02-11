@@ -15,6 +15,7 @@ var fdiType = require('../fixtures/metadata/fdi-type.json')
 var salaryRange = require('../fixtures/metadata/salary-range.json')
 var turnover = require('../fixtures/metadata/turnover.json')
 var sector = require('../fixtures/metadata/sector.json')
+var sectorLte0 = require('../fixtures/metadata/sector-lte0.json')
 var locationType = require('../fixtures/metadata/location-type.json')
 var eventType = require('../fixtures/metadata/event-type.json')
 var programme = require('../fixtures/metadata/programme.json')
@@ -28,8 +29,11 @@ var referralSourceMarketing = require('../fixtures/metadata/referral-source-mark
 var referralSourceActivity = require('../fixtures/metadata/referral-source-activity.json')
 var headquarterType = require('../fixtures/metadata/headquarter-type.json')
 var service = require('../fixtures/metadata/service.json')
+var serviceWithInteraction = require('../fixtures/metadata/service-with-interaction.json')
 var communicationChannel = require('../fixtures/metadata/communication-channel.json')
 var team = require('../fixtures/metadata/team.json')
+var policyArea = require('../fixtures/metadata/policy-area.json')
+var policyIssueType = require('../fixtures/metadata/policy-issue-type.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -96,6 +100,9 @@ exports.turnover = function (req, res) {
 }
 
 exports.sector = function (req, res) {
+  if(req.query.level__lte == '0') {
+    return res.json(sectorLte0)
+  }
   res.json(sector)
 }
 
@@ -148,6 +155,9 @@ exports.headquarterType = function (req, res) {
 }
 
 exports.service = function (req, res) {
+  if(req.query.contexts__has_any == 'interaction') {
+    return res.json(serviceWithInteraction)  
+  }
   res.json(service)
 }
 
@@ -157,4 +167,12 @@ exports.communicationChannel = function (req, res) {
 
 exports.team = function (req, res) {
   res.json(team)
+}
+
+exports.policyArea = function (req, res) {
+  res.json(policyArea)
+}
+
+exports.policyIssueType = function (req, res) {
+  res.json(policyIssueType)
 }
