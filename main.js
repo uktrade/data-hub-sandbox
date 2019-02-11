@@ -1,5 +1,6 @@
 var metadata = require('./routes/metadata.js')
 var user = require('./routes/whoami.js')
+var adviser = require('./routes/adviser.js').adviser
 var v3 = require('./routes/v3.js')
 var dashboard = require('./routes/dashboard.js')
 
@@ -36,15 +37,28 @@ Sandbox.define('/metadata/headquarter-type/','GET', metadata.headquarterType)
 Sandbox.define('/metadata/service/','GET', metadata.service)
 Sandbox.define('/metadata/communication-channel/','GET', metadata.communicationChannel)
 Sandbox.define('/metadata/team/','GET', metadata.team)
+Sandbox.define('/metadata/policy-area/','GET', metadata.policyArea)
+Sandbox.define('/metadata/policy-issue-type/','GET', metadata.policyIssueType)
+
 
 // Whoami endpoint
 Sandbox.define('/whoami/','GET', user.whoami)
 
 
+// Adviser endpoint
+Sandbox.define('/adviser/','GET', adviser)
+
+
 // V3 endpoint
 Sandbox.define('/v3/feature-flag','GET', v3.featureFlag)
 Sandbox.define('/v3/company/*','GET', v3.company)
-Sandbox.define('/v3/interaction/','GET', v3.interaction)
+Sandbox.define('/v3/interaction','GET', v3.interaction)
+Sandbox.define('/v3/interaction/{id}','GET', v3.singleInteraction)
+Sandbox.define('/v3/contact/{contactId}','GET', v3.singleContact)
+Sandbox.define('/v3/company/{companyId}','GET', v3.singleCompany)
+Sandbox.define('/v3/contact','GET', v3.contact)
+Sandbox.define('/v3/search/contact','POST', v3.contacts)
+Sandbox.define('/v3/interaction','POST', v3.createInteraction)
 
 
 // Dashboard endpoint
