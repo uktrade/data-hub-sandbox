@@ -34,6 +34,7 @@ var communicationChannel = require('../fixtures/metadata/communication-channel.j
 var team = require('../fixtures/metadata/team.json')
 var policyArea = require('../fixtures/metadata/policy-area.json')
 var policyIssueType = require('../fixtures/metadata/policy-issue-type.json')
+var serviceDeliveryStatus = require('../fixtures/metadata/service-delivery-status.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -175,4 +176,8 @@ exports.policyArea = function (req, res) {
 
 exports.policyIssueType = function (req, res) {
   res.json(policyIssueType)
+}
+
+exports.serviceDeliveryStatus = function (req, res) {
+  res.json(serviceDeliveryStatus)
 }
