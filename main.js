@@ -39,6 +39,7 @@ Sandbox.define('/metadata/communication-channel/','GET', metadata.communicationC
 Sandbox.define('/metadata/team/','GET', metadata.team)
 Sandbox.define('/metadata/policy-area/','GET', metadata.policyArea)
 Sandbox.define('/metadata/policy-issue-type/','GET', metadata.policyIssueType)
+Sandbox.define('/metadata/service-delivery-status/','GET', metadata.serviceDeliveryStatus)
 
 
 // Whoami endpoint
@@ -58,6 +59,8 @@ Sandbox.define('/v3/contact/{contactId}','GET', v3.singleContact)
 Sandbox.define('/v3/company/{companyId}','GET', v3.singleCompany)
 Sandbox.define('/v3/contact','GET', v3.contact)
 Sandbox.define('/v3/search/contact','POST', v3.contacts)
+Sandbox.define('/v3/search/company','POST', v3.companies)
+Sandbox.define('/v3/search/event','POST', v3.events)
 Sandbox.define('/v3/interaction','POST', v3.createInteraction)
 
 
