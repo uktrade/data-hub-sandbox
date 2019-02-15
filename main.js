@@ -52,7 +52,7 @@ Sandbox.define('/adviser/','GET', adviser)
 
 // V3 endpoint
 Sandbox.define('/v3/feature-flag','GET', v3.featureFlag)
-Sandbox.define('/v3/company/*','GET', v3.company)
+Sandbox.define('/v3/company','GET', v3.company)
 Sandbox.define('/v3/interaction','GET', v3.interaction)
 Sandbox.define('/v3/interaction/{id}','GET', v3.singleInteraction)
 Sandbox.define('/v3/contact/{contactId}','GET', v3.singleContact)
