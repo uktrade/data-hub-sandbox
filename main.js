@@ -1,6 +1,6 @@
 var metadata = require('./routes/metadata.js')
 var user = require('./routes/whoami.js')
-var adviser = require('./routes/adviser.js').adviser
+var adviser = require('./routes/adviser.js')
 var v3 = require('./routes/v3.js')
 var dashboard = require('./routes/dashboard.js')
 
@@ -47,7 +47,8 @@ Sandbox.define('/whoami/','GET', user.whoami)
 
 
 // Adviser endpoint
-Sandbox.define('/adviser/','GET', adviser)
+Sandbox.define('/adviser/','GET', adviser.advisers)
+Sandbox.define('/adviser/{id}/','GET', adviser.singleAdviser)
 
 
 // V3 endpoint
@@ -57,10 +58,12 @@ Sandbox.define('/v3/interaction','GET', v3.interaction)
 Sandbox.define('/v3/interaction/{id}','GET', v3.singleInteraction)
 Sandbox.define('/v3/contact/{contactId}','GET', v3.singleContact)
 Sandbox.define('/v3/company/{companyId}','GET', v3.singleCompany)
+Sandbox.define('/v3/investment/{id}','GET', v3.singleInvestmnetPorject)
 Sandbox.define('/v3/contact','GET', v3.contact)
 Sandbox.define('/v3/search/contact','POST', v3.contacts)
 Sandbox.define('/v3/search/company','POST', v3.companies)
 Sandbox.define('/v3/search/event','POST', v3.events)
+Sandbox.define('/v3/search/investment_project','POST', v3.investmnetPorject)
 Sandbox.define('/v3/interaction','POST', v3.createInteraction)
 
 
