@@ -18,6 +18,8 @@ var events = require('../fixtures/v3/search/events.json')
 var investmnetPorject = require('../fixtures/v3/search/investment-project.json')
 var singleInvestmnetPorject = require('../fixtures/v3/single-investment-project.json')
 
+state.interactionSubject = state.interactionSubject || []
+
 exports.featureFlag = function (req, res) {
     res.json(featureFlag)
 }
@@ -49,10 +51,16 @@ exports.interaction = function (req, res) {
 }
 
 exports.createInteraction = function (req, res) {
+  if (req.body.subject) {
+    state.interactionSubject = req.body.subject
+  }
   res.json(createInteraction)
 }
 
 exports.singleInteraction = function (req, res) {
+  if (state.interactionSubject) {
+    return res.json(_.merge(singleInteraction, {"subject": state.interactionSubject}))
+  }
   res.json(singleInteraction)
 }
 
