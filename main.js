@@ -1,8 +1,23 @@
+var adviser = require('./routes/adviser.js')
+var dashboard = require('./routes/dashboard.js')
 var metadata = require('./routes/metadata.js')
 var user = require('./routes/whoami.js')
-var adviser = require('./routes/adviser.js')
-var v3 = require('./routes/v3.js')
-var dashboard = require('./routes/dashboard.js')
+var v3Company = require('./routes/v3/company/company.js')
+var v3Contact = require('./routes/v3/contact/contact.js')
+var v3FeatureFlag = require('./routes/v3/feature-flag/feature-flag.js')
+var v3Interaction = require('./routes/v3/interaction/interaction.js')
+var v3Investment = require('./routes/v3/investment/investment.js')
+var v3SearchCompany = require('./routes/v3/search/company.js')
+var v3SearchContact = require('./routes/v3/search/contact.js')
+var v3SearchEvent = require('./routes/v3/search/event.js')
+var v3SearchInvestmentProject = require('./routes/v3/search/investment-project.js')
+
+// Adviser endpoint
+Sandbox.define('/adviser/','GET', adviser.advisers)
+Sandbox.define('/adviser/{id}/','GET', adviser.singleAdviser)
+
+// Dashboard endpoint
+Sandbox.define('/dashboard/homepage/','GET', dashboard.homePage)
 
 // Metadata endpoint
 Sandbox.define('/metadata/likelihood-to-land/','GET', metadata.likelihoodToLand)
@@ -41,31 +56,30 @@ Sandbox.define('/metadata/policy-area/','GET', metadata.policyArea)
 Sandbox.define('/metadata/policy-issue-type/','GET', metadata.policyIssueType)
 Sandbox.define('/metadata/service-delivery-status/','GET', metadata.serviceDeliveryStatus)
 
+// V3 Company
+Sandbox.define('/v3/company/{companyId}','GET', v3Company.company)
+Sandbox.define('/v3/company','GET', v3Company.companies)
+
+// V3 Contact
+Sandbox.define('/v3/contact','GET', v3Contact.contact)
+Sandbox.define('/v3/contact/{contactId}','GET', v3Contact.contactById)
+
+// V3 Feature Flag
+Sandbox.define('/v3/feature-flag','GET', v3FeatureFlag.featureFlag)
+
+// V3 Interaction
+Sandbox.define('/v3/interaction','GET', v3Interaction.interactions)
+Sandbox.define('/v3/interaction/{id}','GET', v3Interaction.interactionById)
+Sandbox.define('/v3/interaction','POST', v3Interaction.interactionCreate)
+
+// V3 Investment
+Sandbox.define('/v3/investment/{id}','GET', v3Investment.investmentProject)
+
+// V3 Search
+Sandbox.define('/v3/search/company','POST', v3SearchCompany.companies)
+Sandbox.define('/v3/search/contact','POST', v3SearchContact.contacts)
+Sandbox.define('/v3/search/event','POST', v3SearchEvent.events)
+Sandbox.define('/v3/search/investment_project','POST', v3SearchInvestmentProject.investmentProjects)
 
 // Whoami endpoint
 Sandbox.define('/whoami/','GET', user.whoami)
-
-
-// Adviser endpoint
-Sandbox.define('/adviser/','GET', adviser.advisers)
-Sandbox.define('/adviser/{id}/','GET', adviser.singleAdviser)
-
-
-// V3 endpoint
-Sandbox.define('/v3/feature-flag','GET', v3.featureFlag)
-Sandbox.define('/v3/company','GET', v3.company)
-Sandbox.define('/v3/interaction','GET', v3.interaction)
-Sandbox.define('/v3/interaction/{id}','GET', v3.singleInteraction)
-Sandbox.define('/v3/contact/{contactId}','GET', v3.singleContact)
-Sandbox.define('/v3/company/{companyId}','GET', v3.singleCompany)
-Sandbox.define('/v3/investment/{id}','GET', v3.singleInvestmnetPorject)
-Sandbox.define('/v3/contact','GET', v3.contact)
-Sandbox.define('/v3/search/contact','POST', v3.contacts)
-Sandbox.define('/v3/search/company','POST', v3.companies)
-Sandbox.define('/v3/search/event','POST', v3.events)
-Sandbox.define('/v3/search/investment_project','POST', v3.investmnetPorject)
-Sandbox.define('/v3/interaction','POST', v3.createInteraction)
-
-
-// Dashboard endpoint
-Sandbox.define('/dashboard/homepage/','GET', dashboard.homePage)
