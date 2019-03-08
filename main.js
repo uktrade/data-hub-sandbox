@@ -1,5 +1,6 @@
 var adviser = require('./routes/adviser.js')
 var dashboard = require('./routes/dashboard.js')
+var healthcheck = require('./routes/ping.js')
 var metadata = require('./routes/metadata.js')
 var user = require('./routes/whoami.js')
 var v3Company = require('./routes/v3/company/company.js')
@@ -55,6 +56,9 @@ Sandbox.define('/metadata/team/','GET', metadata.team)
 Sandbox.define('/metadata/policy-area/','GET', metadata.policyArea)
 Sandbox.define('/metadata/policy-issue-type/','GET', metadata.policyIssueType)
 Sandbox.define('/metadata/service-delivery-status/','GET', metadata.serviceDeliveryStatus)
+
+// Ping
+Sandbox.define('/ping.xml','GET', healthcheck.ping)
 
 // V3 Company
 Sandbox.define('/v3/company/{companyId}','GET', v3Company.company)
