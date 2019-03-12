@@ -17,7 +17,7 @@ exports.companies = function (req, res) {
 
 exports.company = function (req, res) {
   var companies = {
-    '4cd4128b-1bad-4f1e-9146-5d4678c6a018': companyArchived,
+    '346f78a5-1d23-4213-b4c2-bf48246a13c3': companyArchived,
     '0f5216e0-849f-11e6-ae22-56b6b6499611': companyWithInvestment1,
     'a73efeba-8499-11e6-ae22-56b6b6499611': companyWithInvestment2,
     'cc7e2f19-7251-4a41-a27a-f98437720531': companyDnBCorp,
