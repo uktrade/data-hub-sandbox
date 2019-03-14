@@ -17,7 +17,7 @@ exports.interactions = function (req, res) {
     return res.json(interactionByCompanyId)
   }
 
-  if(req.query.investment_project_id === '00086bb2-c5ee-4bfb-998f-0b417eafdd3e')
+  if(req.query.investment_project_id === '5d341b34-1fc8-4638-b4b1-a0922ebf401e')
   {
     return res.json(interactionByInvestmentProjectId)
   }

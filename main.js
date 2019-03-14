@@ -7,7 +7,7 @@ var v3Company = require('./routes/v3/company/company.js')
 var v3Contact = require('./routes/v3/contact/contact.js')
 var v3FeatureFlag = require('./routes/v3/feature-flag/feature-flag.js')
 var v3Interaction = require('./routes/v3/interaction/interaction.js')
-var v3Investment = require('./routes/v3/investment/investment.js')
+var v3Investment = require('./routes/v3/investment/investment-projects.js')
 var v3SearchCompany = require('./routes/v3/search/company.js')
 var v3SearchContact = require('./routes/v3/search/contact.js')
 var v3SearchEvent = require('./routes/v3/search/event.js')
@@ -77,7 +77,8 @@ Sandbox.define('/v3/interaction/{id}','GET', v3Interaction.interactionById)
 Sandbox.define('/v3/interaction','POST', v3Interaction.interactionCreate)
 
 // V3 Investment
-Sandbox.define('/v3/investment/{id}','GET', v3Investment.investmentProject)
+Sandbox.define('/v3/investment','GET', v3Investment.investmentProjects)
+Sandbox.define('/v3/investment/{id}','GET', v3Investment.investmentProjectById)
 
 // V3 Search
 Sandbox.define('/v3/search/company','POST', v3SearchCompany.companies)
