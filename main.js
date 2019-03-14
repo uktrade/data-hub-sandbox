@@ -13,6 +13,9 @@ var v3SearchContact = require('./routes/v3/search/contact.js')
 var v3SearchEvent = require('./routes/v3/search/event.js')
 var v3SearchInvestmentProject = require('./routes/v3/search/investment-project.js')
 
+// V4
+var v4Company = require('./routes/v4/company/company.js')
+
 // Adviser endpoint
 Sandbox.define('/adviser/','GET', adviser.advisers)
 Sandbox.define('/adviser/{id}/','GET', adviser.singleAdviser)
@@ -85,6 +88,9 @@ Sandbox.define('/v3/search/company','POST', v3SearchCompany.companies)
 Sandbox.define('/v3/search/contact','POST', v3SearchContact.contacts)
 Sandbox.define('/v3/search/event','POST', v3SearchEvent.events)
 Sandbox.define('/v3/search/investment_project','POST', v3SearchInvestmentProject.investmentProjects)
+
+// V4 Investment
+Sandbox.define('/v4/large-investor-profile','GET', v4Company.largeInvestorProfile)
 
 // Whoami endpoint
 Sandbox.define('/whoami/','GET', user.whoami)
