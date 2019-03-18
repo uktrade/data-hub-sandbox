@@ -1,4 +1,6 @@
 var interaction = require('../../../fixtures/v3/interaction/interaction.json')
+var interactionWithDocumentLink = require('../../../fixtures/v3/interaction/interaction-with-document-link.json')
+var interactionWithoutDocumentLink = require('../../../fixtures/v3/interaction/interaction-without-document-link.json')
 var interactions = require('../../../fixtures/v3/interaction/interactions.json')
 var interactionByInvestmentProjectId = require('../../../fixtures/v3/interaction/interaction-by-investment-project-id.json')
 var interactionByCompanyId = require('../../../fixtures/v3/interaction/interaction-by-company-id.json')
@@ -26,10 +28,16 @@ exports.interactions = function (req, res) {
 }
 
 exports.interactionById = function (req, res) {
-  if (state.interactionSubject) {
-    return res.json(_.merge(interaction, {"subject": state.interactionSubject}))
+  var interactions = {
+    'ec4a46ef-6e50-4a5c-bba0-e311f0471312': interactionWithDocumentLink,
+    '0dcb3748-c097-4f20-b84f-0114bbb1a8e0': interactionWithoutDocumentLink,
   }
-  res.json(interaction)
+
+  if (state.interactionSubject) {
+    return res.json(_.merge(interactions[req.params.interactionId] || interaction, {"subject": state.interactionSubject}))
+  }
+
+  res.json(interactions[req.params.interactionId] || interaction)
 }
 
 exports.interactionCreate = function (req, res) {
