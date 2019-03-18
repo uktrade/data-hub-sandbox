@@ -76,7 +76,7 @@ Sandbox.define('/v3/feature-flag','GET', v3FeatureFlag.featureFlag)
 
 // V3 Interaction
 Sandbox.define('/v3/interaction','GET', v3Interaction.interactions)
-Sandbox.define('/v3/interaction/{id}','GET', v3Interaction.interactionById)
+Sandbox.define('/v3/interaction/{interactionId}','GET', v3Interaction.interactionById)
 Sandbox.define('/v3/interaction','POST', v3Interaction.interactionCreate)
 
 // V3 Investment
