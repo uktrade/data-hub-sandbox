@@ -1,5 +1,5 @@
 {  
-  "id":"5e75d636-1d24-416a-aaf0-3fb220d594ce",
+  "id":"5555d636-1d24-416a-aaf0-3fb220d59aaa",
   "title":null,
   "first_name":"Joseph",
   "last_name":"Woof",
@@ -31,7 +31,7 @@
   "notes":null,
   "accepts_dit_email_marketing":false,
   "archived":false,
-  "archived_documents_url_path":"/document/123",
+  "archived_documents_url_path":"",
   "archived_on":null,
   "archived_reason":null,
   "archived_by":null,
