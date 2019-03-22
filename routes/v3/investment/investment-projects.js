@@ -1,4 +1,5 @@
 var allProjects = require('../../../fixtures/v3/investment/projects.json')
+var project = require('../../../fixtures/v3/investment/project.json')
 
 var allProjectsMap = {};
 allProjects.results.forEach(function(project){
@@ -6,7 +7,7 @@ allProjects.results.forEach(function(project){
 })
 
 exports.investmentProjectById = function (req, res) {
-  res.json(allProjectsMap[req.params.id])
+  res.json(allProjectsMap[req.params.id] || project)
 }
 
 exports.investmentProjects = function (req, res) {
