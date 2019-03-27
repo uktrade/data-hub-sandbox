@@ -89,6 +89,9 @@ Sandbox.define('/v3/search/contact','POST', v3SearchContact.contacts)
 Sandbox.define('/v3/search/event','POST', v3SearchEvent.events)
 Sandbox.define('/v3/search/investment_project','POST', v3SearchInvestmentProject.investmentProjects)
 
+// V4 Company
+Sandbox.define('/v4/company/{companyId}','GET', v4Company.company)
+
 // V4 Investment
 Sandbox.define('/v4/large-investor-profile','GET', v4Company.largeInvestorProfile)
 
