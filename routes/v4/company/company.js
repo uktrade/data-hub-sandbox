@@ -4,10 +4,16 @@ var companyWithInvestment1 = require('../../../fixtures/v4/company/company-with-
 var companyWithInvestment2 = require('../../../fixtures/v4/company/company-with-investment-2.json')
 var companyDnBCorp = require('../../../fixtures/v4/company/company-dnb-corp.json')
 var companyOneListCorp = require('../../../fixtures/v4/company/company-one-list-corp.json')
+
+var nolargeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
 var largeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile.json')
 
 exports.largeInvestorProfile = function (req, res) {
-  res.json(largeCapitalProfile)
+  // One List Corp should have a "Large capital investor profile".
+  if(req.query.investor_company_id === "375094ac-f79a-43e5-9c88-059a7caa17f0") {
+    return res.json(largeCapitalProfile)
+  }
+  res.json(nolargeCapitalProfile)
 }
 
 exports.company = function (req, res) {
