@@ -38,6 +38,16 @@
   },
   "modified_on":"2019-02-07T15:54:01.435681Z",
   "date":"2019-02-07",
+  "dit_adviser":{
+    "name":"DIT Staff",
+    "first_name":"DIT",
+    "last_name":"Staff",
+    "id":"7d19d407-9aec-4d06-b190-d3f404627f21"
+  },
+  "dit_team":{
+    "name":"UKTI Team East Midlands - International Trade Team",
+    "id":"9010dd28-9798-e211-a939-e4115bead28a"
+  },
   "dit_participants": [
     {
       "adviser": {
