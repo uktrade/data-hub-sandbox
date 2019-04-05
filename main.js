@@ -59,6 +59,7 @@ Sandbox.define('/metadata/team/','GET', metadata.team)
 Sandbox.define('/metadata/policy-area/','GET', metadata.policyArea)
 Sandbox.define('/metadata/policy-issue-type/','GET', metadata.policyIssueType)
 Sandbox.define('/metadata/service-delivery-status/','GET', metadata.serviceDeliveryStatus)
+Sandbox.define('/metadata/capital-investment/investor-type/','GET', metadata.capitalInvestmentInvestorType)
 
 // Ping
 Sandbox.define('/ping.xml','GET', healthcheck.ping)
@@ -94,6 +95,7 @@ Sandbox.define('/v4/company/{companyId}','GET', v4Company.company)
 
 // V4 Investment
 Sandbox.define('/v4/large-investor-profile','GET', v4Company.largeInvestorProfile)
+Sandbox.define('/v4/large-investor-profile/{profileId}','PATCH', v4Company.largeInvestorProfilePatched)
 
 // Whoami endpoint
 Sandbox.define('/whoami/','GET', user.whoami)
