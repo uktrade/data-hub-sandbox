@@ -17,6 +17,10 @@ exports.largeInvestorProfile = function (req, res) {
   res.json(nolargeCapitalProfile)
 }
 
+exports.largeInvestorProfilePatched = function (req, res) {
+  res.json(largeCapitalProfile)
+}
+
 exports.company = function (req, res) {
   var companies = {
     '346f78a5-1d23-4213-b4c2-bf48246a13c3': companyArchived,
