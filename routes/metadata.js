@@ -35,6 +35,7 @@ var team = require('../fixtures/metadata/team.json')
 var policyArea = require('../fixtures/metadata/policy-area.json')
 var policyIssueType = require('../fixtures/metadata/policy-issue-type.json')
 var serviceDeliveryStatus = require('../fixtures/metadata/service-delivery-status.json')
+var capitalInvestmentInvestorType = require('../fixtures/metadata/capital-investment-investor-type.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -157,7 +158,7 @@ exports.headquarterType = function (req, res) {
 
 exports.service = function (req, res) {
   if(req.query.contexts__has_any == 'interaction') {
-    return res.json(serviceWithInteraction)  
+    return res.json(serviceWithInteraction)
   }
   res.json(service)
 }
@@ -180,4 +181,8 @@ exports.policyIssueType = function (req, res) {
 
 exports.serviceDeliveryStatus = function (req, res) {
   res.json(serviceDeliveryStatus)
+}
+
+exports.capitalInvestmentInvestorType = function (req, res) {
+  res.json(capitalInvestmentInvestorType)
 }
