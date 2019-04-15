@@ -5,9 +5,7 @@ Documentation
 
 Please follow the documentation below to install sandbox.
 
-
-
-## Using sandbox on host machine
+### Using sandbox on host machine
 
 1. Install sandbox, see [instructions](https://github.com/getsandbox/sandbox).
 2. Start sandbox on port `8001`:
@@ -15,7 +13,7 @@ Please follow the documentation below to install sandbox.
 	sandbox run --port="8001"
 	```
 
-## Using sandbox within docker
+### Using sandbox within docker
 
 1. Build the image:
 	```bash
