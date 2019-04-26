@@ -3,6 +3,7 @@ var dashboard = require('./routes/dashboard.js')
 var healthcheck = require('./routes/ping.js')
 var metadata = require('./routes/metadata.js')
 var user = require('./routes/whoami.js')
+var v3ChCompany = require('./routes/v3/ch-company/company.js')
 var v3Company = require('./routes/v3/company/company.js')
 var v3Contact = require('./routes/v3/contact/contact.js')
 var v3FeatureFlag = require('./routes/v3/feature-flag/feature-flag.js')
@@ -63,6 +64,9 @@ Sandbox.define('/metadata/capital-investment/investor-type/','GET', metadata.cap
 
 // Ping
 Sandbox.define('/ping.xml','GET', healthcheck.ping)
+
+// V3 CH Company
+Sandbox.define('/v3/ch-company/{companyId}','GET', v3ChCompany.company)
 
 // V3 Company
 Sandbox.define('/v3/company/{companyId}','GET', v3Company.company)
