@@ -13,6 +13,7 @@ var v3SearchCompany = require('./routes/v3/search/company.js')
 var v3SearchContact = require('./routes/v3/search/contact.js')
 var v3SearchEvent = require('./routes/v3/search/event.js')
 var v3SearchInvestmentProject = require('./routes/v3/search/investment-project.js')
+var v3SearchOrder = require('./routes/v3/search/order.js')
 
 // V4
 var v4Company = require('./routes/v4/company/company.js')
@@ -92,6 +93,7 @@ Sandbox.define('/v3/investment/{id}','GET', v3Investment.investmentProjectById)
 Sandbox.define('/v3/search/company','POST', v3SearchCompany.companies)
 Sandbox.define('/v3/search/contact','POST', v3SearchContact.contacts)
 Sandbox.define('/v3/search/event','POST', v3SearchEvent.events)
+Sandbox.define('/v3/search/order','POST', v3SearchOrder.order)
 Sandbox.define('/v3/search/investment_project','POST', v3SearchInvestmentProject.investmentProjects)
 
 // V4 Company
