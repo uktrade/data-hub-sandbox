@@ -7,6 +7,7 @@ var companyMinimallyMinimal = require('../../../fixtures/v4/company/company-mini
 var companyOneListCorp = require('../../../fixtures/v4/company/company-one-list-corp.json')
 var companyWithInvestment1 = require('../../../fixtures/v4/company/company-with-investment-1.json')
 var companyWithInvestment2 = require('../../../fixtures/v4/company/company-with-investment-2.json')
+var companyWithContacts = require('../../../fixtures/v4/company/company-with-contacts.json')
 
 var nolargeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
 var largeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile.json')
@@ -33,6 +34,7 @@ exports.company = function (req, res) {
     '375094ac-f79a-43e5-9c88-059a7caa17f0': companyOneListCorp,
     '0f5216e0-849f-11e6-ae22-56b6b6499611': companyWithInvestment1,
     'a73efeba-8499-11e6-ae22-56b6b6499611': companyWithInvestment2,
+    '0f5216e0-849f-11e6-ae22-56b6b6499622': companyWithContacts,
   }
 
   res.json(companies[req.params.companyId] || company)
