@@ -16,6 +16,7 @@ var v3SearchInvestmentProject = require('./routes/v3/search/investment-project.j
 var v3SearchOrder = require('./routes/v3/search/order.js')
 
 // V4
+var v4ChCompany = require('./routes/v4/ch-company/company.js')
 var v4Company = require('./routes/v4/company/company.js')
 
 // Adviser endpoint
@@ -96,6 +97,9 @@ Sandbox.define('/v3/search/contact','POST', v3SearchContact.contacts)
 Sandbox.define('/v3/search/event','POST', v3SearchEvent.events)
 Sandbox.define('/v3/search/order','POST', v3SearchOrder.order)
 Sandbox.define('/v3/search/investment_project','POST', v3SearchInvestmentProject.investmentProjects)
+
+// V3 CH Company
+Sandbox.define('/v4/ch-company/{companyId}','GET', v4ChCompany.company)
 
 // V4 Company
 Sandbox.define('/v4/company/{companyId}','GET', v4Company.company)
