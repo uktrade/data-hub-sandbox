@@ -62,6 +62,7 @@ Sandbox.define('/metadata/policy-area/','GET', metadata.policyArea)
 Sandbox.define('/metadata/policy-issue-type/','GET', metadata.policyIssueType)
 Sandbox.define('/metadata/service-delivery-status/','GET', metadata.serviceDeliveryStatus)
 Sandbox.define('/metadata/capital-investment/investor-type/','GET', metadata.capitalInvestmentInvestorType)
+Sandbox.define('/metadata/capital-investment/required-checks-conducted/','GET', metadata.capitalInvestmentRequiredChecks)
 
 // Ping
 Sandbox.define('/ping.xml','GET', healthcheck.ping)
