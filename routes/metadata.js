@@ -36,6 +36,7 @@ var policyArea = require('../fixtures/metadata/policy-area.json')
 var policyIssueType = require('../fixtures/metadata/policy-issue-type.json')
 var serviceDeliveryStatus = require('../fixtures/metadata/service-delivery-status.json')
 var capitalInvestmentInvestorType = require('../fixtures/metadata/capital-investment-investor-type.json')
+var capitalInvestmentRequiredChecks = require('../fixtures/metadata/capital-investment-required-checks.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -185,4 +186,8 @@ exports.serviceDeliveryStatus = function (req, res) {
 
 exports.capitalInvestmentInvestorType = function (req, res) {
   res.json(capitalInvestmentInvestorType)
+}
+
+exports.capitalInvestmentRequiredChecks = function (req, res) {
+  res.json(capitalInvestmentRequiredChecks)
 }
