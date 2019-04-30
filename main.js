@@ -3,8 +3,6 @@ var dashboard = require('./routes/dashboard.js')
 var healthcheck = require('./routes/ping.js')
 var metadata = require('./routes/metadata.js')
 var user = require('./routes/whoami.js')
-var v3ChCompany = require('./routes/v3/ch-company/company.js')
-var v3Company = require('./routes/v3/company/company.js')
 var v3Contact = require('./routes/v3/contact/contact.js')
 var v3FeatureFlag = require('./routes/v3/feature-flag/feature-flag.js')
 var v3Interaction = require('./routes/v3/interaction/interaction.js')
@@ -68,13 +66,6 @@ Sandbox.define('/metadata/capital-investment/required-checks-conducted/','GET', 
 // Ping
 Sandbox.define('/ping.xml','GET', healthcheck.ping)
 
-// V3 CH Company
-Sandbox.define('/v3/ch-company/{companyId}','GET', v3ChCompany.company)
-
-// V3 Company
-Sandbox.define('/v3/company/{companyId}','GET', v3Company.company)
-Sandbox.define('/v3/company','GET', v3Company.companies)
-
 // V3 Contact
 Sandbox.define('/v3/contact','GET', v3Contact.contact)
 Sandbox.define('/v3/contact/{contactId}','GET', v3Contact.contactById)
@@ -98,11 +89,12 @@ Sandbox.define('/v3/search/event','POST', v3SearchEvent.events)
 Sandbox.define('/v3/search/order','POST', v3SearchOrder.order)
 Sandbox.define('/v3/search/investment_project','POST', v3SearchInvestmentProject.investmentProjects)
 
-// V3 CH Company
+// V4 CH Company
 Sandbox.define('/v4/ch-company/{companyId}','GET', v4ChCompany.company)
 
 // V4 Company
 Sandbox.define('/v4/company/{companyId}','GET', v4Company.company)
+Sandbox.define('/v4/company', 'GET', v4Company.companies)
 
 // V4 Investment
 Sandbox.define('/v4/large-investor-profile','GET', v4Company.largeInvestorProfile)
