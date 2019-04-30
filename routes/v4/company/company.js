@@ -1,3 +1,5 @@
+var companiesNoResults = require('../../../fixtures/v4/company/companies-no-results.json')
+var companyArchivedSubsidiaries = require('../../../fixtures/v4/company/company-archived-subsidiaries.json')
 var company = require('../../../fixtures/v4/company/company.json')
 var companyArchived = require('../../../fixtures/v4/company/company-archived.json')
 var companyDnBCorp = require('../../../fixtures/v4/company/company-dnb-corp.json')
@@ -22,6 +24,14 @@ exports.largeInvestorProfile = function (req, res) {
 
 exports.largeInvestorProfilePatched = function (req, res) {
   res.json(largeCapitalProfile)
+}
+
+exports.companies = function (req, res) {
+  var subsidiaries = {
+    '346f78a5-1d23-4213-b4c2-bf48246a13c3': companyArchivedSubsidiaries,
+  }
+
+  res.json(subsidiaries[req.query.global_headquarters_id] || companiesNoResults)
 }
 
 exports.company = function (req, res) {
