@@ -30,6 +30,8 @@ var referralSourceActivity = require('../fixtures/metadata/referral-source-activ
 var headquarterType = require('../fixtures/metadata/headquarter-type.json')
 var service = require('../fixtures/metadata/service.json')
 var serviceWithInteraction = require('../fixtures/metadata/service-with-interaction.json')
+var serviceExportInteraction = require('../fixtures/metadata/service-export-interaction.json')
+var serviceExportServiceDelivery = require('../fixtures/metadata/service-export-service-delivery.json')
 var communicationChannel = require('../fixtures/metadata/communication-channel.json')
 var team = require('../fixtures/metadata/team.json')
 var policyArea = require('../fixtures/metadata/policy-area.json')
@@ -158,10 +160,14 @@ exports.headquarterType = function (req, res) {
 }
 
 exports.service = function (req, res) {
-  if(req.query.contexts__has_any == 'interaction') {
-    return res.json(serviceWithInteraction)
+
+  var services = {
+    interaction: serviceWithInteraction,
+    export_interaction: serviceExportInteraction,
+    export_service_delivery: serviceExportServiceDelivery,
   }
-  res.json(service)
+
+  res.json(services[req.query.contexts__has_any] || service)
 }
 
 exports.communicationChannel = function (req, res) {
