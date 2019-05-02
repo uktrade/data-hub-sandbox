@@ -16,6 +16,7 @@ var v3SearchOrder = require('./routes/v3/search/order.js')
 // V4
 var v4ChCompany = require('./routes/v4/ch-company/company.js')
 var v4Company = require('./routes/v4/company/company.js')
+var v4SearchCompany = require('./routes/v4/search/company.js')
 
 // Adviser endpoint
 Sandbox.define('/adviser/','GET', adviser.advisers)
@@ -99,6 +100,9 @@ Sandbox.define('/v4/company', 'GET', v4Company.companies)
 // V4 Investment
 Sandbox.define('/v4/large-investor-profile','GET', v4Company.largeInvestorProfile)
 Sandbox.define('/v4/large-investor-profile/{profileId}','PATCH', v4Company.largeInvestorProfilePatched)
+
+// V4 Search
+Sandbox.define('/v4/search/company','POST', v4SearchCompany.companies)
 
 // Whoami endpoint
 Sandbox.define('/whoami/','GET', user.whoami)
