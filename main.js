@@ -69,6 +69,7 @@ Sandbox.define('/ping.xml','GET', healthcheck.ping)
 
 // V3 Contact
 Sandbox.define('/v3/contact','GET', v3Contact.contact)
+Sandbox.define('/v3/contact','POST', v3Contact.contactCreate)
 Sandbox.define('/v3/contact/{contactId}','GET', v3Contact.contactById)
 
 // V3 Feature Flag
