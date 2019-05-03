@@ -14,9 +14,10 @@ var companyWithContacts = require('../../../fixtures/v4/company/company-with-con
 var nolargeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
 var largeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile.json')
 
+state.investor_description = state.investor_description || ''
+
 exports.largeInvestorProfile = function (req, res) {
-  // One List Corp should have a "Large capital investor profile".
-  if(req.query.investor_company_id === "375094ac-f79a-43e5-9c88-059a7caa17f0") {
+  if (req.query.investor_company_id === companyOneListCorp.id) {
     return res.json(largeCapitalProfile)
   }
   res.json(nolargeCapitalProfile)
@@ -49,4 +50,3 @@ exports.company = function (req, res) {
 
   res.json(companies[req.params.companyId] || company)
 }
-
