@@ -12,11 +12,7 @@
         "id": "375094ac-f79a-43e5-9c88-059a7caa17f0"
       },
       "incomplete_details_fields": [
-        "investor_type",
-        "investable_capital",
-        "global_assets_under_management",
-        "investor_description",
-        "required_checks_conducted"
+        "investor_description"
       ],
       "incomplete_requirements_fields": [
         "deal_ticket_sizes",
@@ -34,11 +30,19 @@
         "notes_on_locations",
         "other_countries_being_considered"
       ],
-      "investor_type": null,
-      "investable_capital": null,
-      "global_assets_under_management": null,
+      "investor_type": {
+        "id": "80168d31-fa91-494e-9ad5-b9255e01b5da",
+        "name": "Asset manager"
+      },
+      "investable_capital": 30000,
+      "global_assets_under_management": 1000000,
       "investor_description": "",
-      "required_checks_conducted": null,
+      "required_checks_conducted": {
+        "id": "02d6fc9b-fbb9-4621-b247-d86f2487898e",
+        "name": "Cleared"
+      },
+      "required_checks_conducted_on": "2019-04-29",
+      "required_checks_conducted_by": "a80ff5fd-8904-4940-bf96-fe8047e34be5",
       "deal_ticket_sizes": [],
       "investment_types": [],
       "minimum_return_rate": null,
