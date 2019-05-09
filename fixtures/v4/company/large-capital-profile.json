@@ -42,7 +42,10 @@
         "name": "Cleared"
       },
       "required_checks_conducted_on": "2019-04-29",
-      "required_checks_conducted_by": "a80ff5fd-8904-4940-bf96-fe8047e34be5",
+      "required_checks_conducted_by": {
+        "name": "Aaron Chan",
+        "id": "b9d6b3dc-7af4-e411-bcbe-e4115bead28a"
+      },
       "deal_ticket_sizes": [],
       "investment_types": [],
       "minimum_return_rate": null,
