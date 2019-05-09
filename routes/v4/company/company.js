@@ -13,6 +13,8 @@ var companyWithContacts = require('../../../fixtures/v4/company/company-with-con
 
 var nolargeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
 var largeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile.json')
+var largeCapitalProfileCreateError = require('../../../fixtures/v4/company/large-capital-profile-post-create-error.json')
+var largeCapitalProfileCreateSuccess = require('../../../fixtures/v4/company/large-capital-profile-post-create-success.json')
 
 state.investor_description = state.investor_description || ''
 
@@ -25,6 +27,15 @@ exports.largeInvestorProfile = function (req, res) {
 
 exports.largeInvestorProfilePatched = function (req, res) {
   res.json(largeCapitalProfile)
+}
+
+exports.largeInvestorProfilePostCreate = function (req, res) {
+  if (req.body.investor_company === '400094ac-f79a-43e5-9c88-059a7baa17f3')
+  {
+   return res.json(400, largeCapitalProfileCreateError)
+  }
+
+  res.json(largeCapitalProfileCreateSuccess)
 }
 
 exports.companies = function (req, res) {
