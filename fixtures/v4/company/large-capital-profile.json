@@ -46,7 +46,26 @@
         "name": "Aaron Chan",
         "id": "b9d6b3dc-7af4-e411-bcbe-e4115bead28a"
       },
-      "deal_ticket_sizes": [],
+      "deal_ticket_sizes": [{
+          "name": "Up to £49 million",
+          "id": "56492c50-aa12-404d-a14e-1eaae24ac6ee"
+        }, {
+          "name": "£50-99 million",
+          "id": "54df4ffb-5787-49b8-a7d2-ba33040fa32f"
+        }, {
+          "name": "£100-249 million",
+          "id": "359f4183-5617-47a9-a2ac-39e2c60d5088"
+        }, {
+          "id": "e5ae2715-aa2c-4aa2-b047-f247625322a3",
+          "name": "£250-499 million"
+        }, {
+          "id": "01eb55d6-167f-4c2f-b482-b0356605d3e1",
+          "name": "£500-999 million"
+        }, {
+          "id": "5e7601b5-becd-42ea-b885-1bbd88b85e4b",
+          "name": "£1 billion +"
+        }
+      ],
       "investment_types": [],
       "minimum_return_rate": null,
       "time_horizons": [],
