@@ -11,7 +11,8 @@ var companyWithInvestment1 = require('../../../fixtures/v4/company/company-with-
 var companyWithInvestment2 = require('../../../fixtures/v4/company/company-with-investment-2.json')
 var companyWithContacts = require('../../../fixtures/v4/company/company-with-contacts.json')
 
-var nolargeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
+var largeCapitalProfileEmpty = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
+var largeCapitalProfileNew = require('../../../fixtures/v4/company/large-capital-profile-new.json')
 var largeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile.json')
 var largeCapitalProfileCreateError = require('../../../fixtures/v4/company/large-capital-profile-post-create-error.json')
 var largeCapitalProfileCreateSuccess = require('../../../fixtures/v4/company/large-capital-profile-post-create-success.json')
@@ -22,7 +23,10 @@ exports.largeInvestorProfile = function (req, res) {
   if (req.query.investor_company_id === companyOneListCorp.id) {
     return res.json(largeCapitalProfile)
   }
-  res.json(nolargeCapitalProfile)
+  if (req.query.investor_company_id === companyLambdaPlc.id) {
+    return res.json(largeCapitalProfileNew)
+  }
+  res.json(largeCapitalProfileEmpty)
 }
 
 exports.largeInvestorProfilePatched = function (req, res) {
