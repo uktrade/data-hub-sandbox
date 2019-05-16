@@ -66,6 +66,7 @@ Sandbox.define('/metadata/capital-investment/investor-type/','GET', metadata.cap
 Sandbox.define('/metadata/capital-investment/required-checks-conducted/','GET', metadata.capitalInvestmentRequiredChecks)
 Sandbox.define('/metadata/capital-investment/deal-ticket-size/','GET', metadata.capitalInvestmentDealTicketSize)
 Sandbox.define('/metadata/capital-investment/large-capital-investment-type/','GET', metadata.capitalInvestmentInvestmentTypes)
+Sandbox.define('/metadata/capital-investment/time-horizon/','GET', metadata.capitalInvestmentTimeHorizons)
 
 // Ping
 Sandbox.define('/ping.xml','GET', healthcheck.ping)

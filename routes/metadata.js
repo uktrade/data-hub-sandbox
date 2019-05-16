@@ -41,6 +41,7 @@ var capitalInvestmentInvestorType = require('../fixtures/metadata/capital-invest
 var capitalInvestmentRequiredChecks = require('../fixtures/metadata/capital-investment-required-checks.json')
 var capitalInvestmentDealTicketSize = require('../fixtures/metadata/capital-investment-deal-ticket-size.json')
 var capitalInvestmentInvestmentTypes = require('../fixtures/metadata/capital-investment-investment-types.json')
+var capitalInvestmentTimeHorizons = require('../fixtures/metadata/capital-investment-time-horizons.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -206,4 +207,8 @@ exports.capitalInvestmentDealTicketSize = function (req, res) {
 
 exports.capitalInvestmentInvestmentTypes = function (req, res) {
   res.json(capitalInvestmentInvestmentTypes)
+}
+
+exports.capitalInvestmentTimeHorizons = function (req, res) {
+  res.json(capitalInvestmentTimeHorizons)
 }
