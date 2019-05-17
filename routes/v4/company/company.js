@@ -65,3 +65,7 @@ exports.company = function (req, res) {
 
   res.json(companies[req.params.companyId] || company)
 }
+
+exports.companyPatched = function (req, res) {
+  res.json(company)
+}
