@@ -100,6 +100,7 @@ Sandbox.define('/v4/ch-company/{companyId}','GET', v4ChCompany.company)
 
 // V4 Company
 Sandbox.define('/v4/company/{companyId}','GET', v4Company.company)
+Sandbox.define('/v4/company/{companyId}','PATCH', v4Company.companyPatched)
 Sandbox.define('/v4/company', 'GET', v4Company.companies)
 
 // V4 Investment
