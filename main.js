@@ -18,6 +18,7 @@ var v4ChCompany = require('./routes/v4/ch-company/company.js')
 var v4Company = require('./routes/v4/company/company.js')
 var v4SearchCompany = require('./routes/v4/search/company.js')
 var v4SearchCompanyWithCountry = require('./routes/v4/search/company/autocomplete.js')
+var v4SearchLargeInvestorProfiles = require('./routes/v4/search/large-investor-profile/results.js')
 
 // Adviser endpoint
 Sandbox.define('/adviser/','GET', adviser.advisers)
@@ -110,6 +111,7 @@ Sandbox.define('/v4/large-investor-profile','POST', v4Company.largeInvestorProfi
 
 // V4 Search
 Sandbox.define('/v4/search/company','POST', v4SearchCompany.companies)
+Sandbox.define('/v4/search/large-investor-profile', 'POST', v4SearchLargeInvestorProfiles.largeInvestorProfile)
 Sandbox.define('/v4/search/company/autocomplete', 'GET', v4SearchCompanyWithCountry.companiesAutocomplete)
 
 // Whoami endpoint
