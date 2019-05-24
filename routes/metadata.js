@@ -41,6 +41,7 @@ var capitalInvestmentInvestorType = require('../fixtures/metadata/capital-invest
 var capitalInvestmentRequiredChecks = require('../fixtures/metadata/capital-investment-required-checks.json')
 var capitalInvestmentDealTicketSize = require('../fixtures/metadata/capital-investment-deal-ticket-size.json')
 var capitalInvestmentInvestmentTypes = require('../fixtures/metadata/capital-investment-investment-types.json')
+var capitalInvestmentMinimumReturnRate = require('../fixtures/metadata/capital-investment-return-rate.json')
 var capitalInvestmentTimeHorizons = require('../fixtures/metadata/capital-investment-time-horizons.json')
 var capitalInvestmentRestrictions = require('../fixtures/metadata/capital-investment-restrictions.json')
 var capitalInvestmentConstructionRisks = require('../fixtures/metadata/capital-investment-construction-risks.json')
@@ -211,6 +212,10 @@ exports.capitalInvestmentDealTicketSize = function (req, res) {
 
 exports.capitalInvestmentInvestmentTypes = function (req, res) {
   res.json(capitalInvestmentInvestmentTypes)
+}
+
+exports.capitalInvestmentMinimumReturnRate = function (req, res) {
+  res.json(capitalInvestmentMinimumReturnRate)
 }
 
 exports.capitalInvestmentTimeHorizons = function (req, res) {

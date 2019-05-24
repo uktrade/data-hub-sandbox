@@ -98,7 +98,10 @@
           "name": "Private Equity / Venture Capital"
         }
       ],
-      "minimum_return_rate": null,
+      "minimum_return_rate": {
+        "id": "6ecbd7d2-e16a-4bfd-a4b9-8c9bca947302",
+        "name": "10-15%"
+      },
       "time_horizons": [{
           "id": "d2d1bdbb-c42a-459c-adaa-fce45ce08cc9",
           "name": "Up to 5 years"
