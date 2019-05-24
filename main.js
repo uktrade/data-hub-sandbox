@@ -70,6 +70,7 @@ Sandbox.define('/metadata/capital-investment/large-capital-investment-type/','GE
 Sandbox.define('/metadata/capital-investment/time-horizon/','GET', metadata.capitalInvestmentTimeHorizons)
 Sandbox.define('/metadata/capital-investment/restriction/','GET', metadata.capitalInvestmentRestrictions)
 Sandbox.define('/metadata/capital-investment/construction-risk/','GET', metadata.capitalInvestmentConstructionRisks)
+Sandbox.define('/metadata/capital-investment/equity-percentage/','GET', metadata.capitalInvestmentEquityPercentage)
 Sandbox.define('/metadata/capital-investment/desired-deal-role/','GET', metadata.capitalInvestmentDesiredDealRoles)
 
 // Ping
