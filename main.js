@@ -67,6 +67,7 @@ Sandbox.define('/metadata/capital-investment/investor-type/','GET', metadata.cap
 Sandbox.define('/metadata/capital-investment/required-checks-conducted/','GET', metadata.capitalInvestmentRequiredChecks)
 Sandbox.define('/metadata/capital-investment/deal-ticket-size/','GET', metadata.capitalInvestmentDealTicketSize)
 Sandbox.define('/metadata/capital-investment/large-capital-investment-type/','GET', metadata.capitalInvestmentInvestmentTypes)
+Sandbox.define('/metadata/capital-investment/return-rate/','GET', metadata.capitalInvestmentMinimumReturnRate)
 Sandbox.define('/metadata/capital-investment/time-horizon/','GET', metadata.capitalInvestmentTimeHorizons)
 Sandbox.define('/metadata/capital-investment/restriction/','GET', metadata.capitalInvestmentRestrictions)
 Sandbox.define('/metadata/capital-investment/construction-risk/','GET', metadata.capitalInvestmentConstructionRisks)
