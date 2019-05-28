@@ -17,6 +17,7 @@
   "created_by": null,
   "event": null,
   "is_event": null,
+  "status": "complete",
   "kind": "interaction",
   "modified_by": null,
   "modified_on": "2017-06-05T00:00:00Z",
@@ -47,7 +48,7 @@
       "id": "46cd2e66-dc21-e311-a78e-e4115bead28a"
   },
   "service_delivery_status": null,
-  "subject": "Provided funding information",
+  "subject": "No link to a document",
   "notes": "This is a dummy interaction for testing",
   "archived_documents_url_path": "",
   "policy_areas": [],
