@@ -34,6 +34,7 @@
           },
           "event": null,
           "is_event": null,
+          "status": "complete",
           "kind": "interaction",
           "modified_by": {
               "name": "DIT Staff",
@@ -104,6 +105,7 @@
           },
           "event": null,
           "is_event": null,
+          "status": "complete",
           "kind": "interaction",
           "modified_by": {
               "name": "DIT Staff",
@@ -174,6 +176,7 @@
           },
           "event": null,
           "is_event": null,
+          "status": "complete",
           "kind": "interaction",
           "modified_by": {
               "name": "DIT Staff",
@@ -243,6 +246,7 @@
               "id": "7d19d407-9aec-4d06-b190-d3f404627f21"
           },
           "event": null,
+          "status": "complete",
           "is_event": null,
           "kind": "interaction",
           "modified_by": {
