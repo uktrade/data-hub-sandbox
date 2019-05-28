@@ -29,6 +29,7 @@
   },
   "event":null,
   "is_event":null,
+  "status": "complete",
   "kind":"interaction",
   "modified_by":{  
      "name":"DIT Staff",

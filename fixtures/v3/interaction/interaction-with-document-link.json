@@ -25,6 +25,7 @@
      "id":"bda12a57-433c-4a0c-a7ce-5ebd080e09e8"
   },
   "is_event":true,
+  "status": "complete",
   "kind":"service_delivery",
   "modified_by":{  
      "name":"Puck Head",
@@ -53,7 +54,7 @@
      "id":"9584b82b-3499-e211-a939-e4115bead28a"
   },
   "service_delivery_status":null,
-  "subject":"Attended gamma event",
+  "subject":"Link to a document",
   "notes":"This is a dummy service delivery for testing",
   "archived_documents_url_path":"/documents/123",
   "policy_areas":[  
