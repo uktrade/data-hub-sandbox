@@ -73,6 +73,7 @@ Sandbox.define('/metadata/capital-investment/restriction/','GET', metadata.capit
 Sandbox.define('/metadata/capital-investment/construction-risk/','GET', metadata.capitalInvestmentConstructionRisks)
 Sandbox.define('/metadata/capital-investment/equity-percentage/','GET', metadata.capitalInvestmentEquityPercentage)
 Sandbox.define('/metadata/capital-investment/desired-deal-role/','GET', metadata.capitalInvestmentDesiredDealRoles)
+Sandbox.define('/metadata/capital-investment/asset-class-interest/','GET', metadata.capitalInvestmentAssetClassInterest)
 
 // Ping
 Sandbox.define('/ping.xml','GET', healthcheck.ping)
