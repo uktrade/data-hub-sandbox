@@ -9,9 +9,7 @@ var interactionCreate = require('../../../fixtures/v3/interaction/interaction-cr
 var interactionDraftFutureMeeting = require('../../../fixtures/v3/interaction/interaction-draft-future-meeting.json')
 var interactionDraftPastMeeting = require('../../../fixtures/v3/interaction/interaction-draft-past-meeting.json')
 
-state.interactionSubject = state.interactionSubject || []
-
-exports.interactions = function (req, res) {
+var getInteractions = function (req, res) {
   if(req.query.contact_id) {
     return res.json(interactionByContactId)
   }
@@ -27,7 +25,7 @@ exports.interactions = function (req, res) {
   res.json(interactions)
 }
 
-exports.interactionById = function (req, res) {
+var getInteractionById = function (req, res) {
   var interactions = {
     'ec4a46ef-6e50-4a5c-bba0-e311f0471312': interactionWithDocumentLink,
     '0dcb3748-c097-4f20-b84f-0114bbb1a8e0': interactionWithoutDocumentLink,
@@ -35,16 +33,38 @@ exports.interactionById = function (req, res) {
     '888c12ee-91db-4964-908e-0f18ce823096': interactionDraftPastMeeting,
   }
 
-  if (state.interactionSubject) {
-    return res.json(_.merge(interactions[req.params.interactionId] || interaction, {"subject": state.interactionSubject}))
+  var interactionResponse = interactions[req.params.interactionId] || interaction
+
+  if (state.interaction) {
+    var merged = _.merge({}, interactionResponse, {
+      subject: state.interaction.subject,
+    })
+    delete state.interaction
+    return res.json(merged)
   }
 
-  res.json(interactions[req.params.interactionId] || interaction)
+  return res.json(interactionResponse)
 }
 
-exports.interactionCreate = function (req, res) {
+var createInteraction = function (req, res) {
   if (req.body.subject) {
-    state.interactionSubject = req.body.subject
+    state.interaction = {
+      subject: req.body.subject,
+    }
   }
   res.json(interactionCreate)
 }
+
+var archiveInteraction = function (req, res) {
+  return getInteractionById(req, res)
+}
+
+var patchInteraction = function (req, res) {
+  return getInteractionById(req, res)
+}
+
+exports.getInteractions = getInteractions
+exports.getInteractionById = getInteractionById
+exports.createInteraction = createInteraction
+exports.archiveInteraction = archiveInteraction
+exports.patchInteraction = patchInteraction
