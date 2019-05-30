@@ -87,9 +87,11 @@ Sandbox.define('/v3/contact/{contactId}','GET', v3Contact.contactById)
 Sandbox.define('/v3/feature-flag','GET', v3FeatureFlag.featureFlag)
 
 // V3 Interaction
-Sandbox.define('/v3/interaction','GET', v3Interaction.interactions)
-Sandbox.define('/v3/interaction/{interactionId}','GET', v3Interaction.interactionById)
-Sandbox.define('/v3/interaction','POST', v3Interaction.interactionCreate)
+Sandbox.define('/v3/interaction','GET', v3Interaction.getInteractions)
+Sandbox.define('/v3/interaction/{interactionId}','GET', v3Interaction.getInteractionById)
+Sandbox.define('/v3/interaction','POST', v3Interaction.createInteraction)
+Sandbox.define('/v3/interaction/{interactionId}/archive','POST', v3Interaction.archiveInteraction)
+Sandbox.define('/v3/interaction/{interactionId}','PATCH', v3Interaction.archiveInteraction)
 
 // V3 Investment
 Sandbox.define('/v3/investment','GET', v3Investment.investmentProjects)
