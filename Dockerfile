@@ -1,8 +1,5 @@
 FROM openjdk:8u171-jre-slim
 
-# Increment this version each time when you edit Dockerfile.
-ENV VERSION 0.1.0
-
 ADD https://dl.bintray.com/getsandbox/public/com/sandbox/sandbox/1.0.235/sandbox-1.0.235-all.jar /sandbox.jar
 ENV LANG C.UTF-8
 
