@@ -28,16 +28,14 @@ Please follow the documentation below to install sandbox.
 
 ### Creating Docker container for CircleCI
 
-```bash
-export VERSION=0.1.0 # Increment this version each time when you edit Dockerfile.
+TODO: Add automatic docker builds.
 
+```bash
 docker login # Ask webops for Docker Hub access to the ukti group.
 docker build -f Dockerfile -t data-hub-sandbox .
 
-docker tag data-hub-sandbox:latest ukti/data-hub-sandbox:${VERSION}
 docker tag data-hub-sandbox:latest ukti/data-hub-sandbox:latest
 
-docker push ukti/data-hub-sandbox:${VERSION}
 docker push ukti/data-hub-sandbox:latest
 ```
 
