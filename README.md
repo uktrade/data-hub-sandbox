@@ -28,8 +28,10 @@ Please follow the documentation below to install sandbox.
 
 ### Creating Docker container for CircleCI
 
-TODO: Add automatic docker builds.
+Docker image will be automatically rebuilt on each push.
 
+However, you can still do this manually.
+ 
 ```bash
 docker login # Ask webops for Docker Hub access to the ukti group.
 docker build -f Dockerfile -t data-hub-sandbox .
