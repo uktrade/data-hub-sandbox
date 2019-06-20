@@ -15,6 +15,7 @@ var v3SearchOrder = require("./routes/v3/search/order.js");
 var v3SearchInteraction = require("./routes/v3/search/interaction.js");
 
 // V4
+var v4ActivityFeed = require("./routes/v4/activity-feed/activity-feed.js");
 var v4ChCompany = require("./routes/v4/ch-company/company.js");
 var v4Company = require("./routes/v4/company/company.js");
 var v4SearchCompany = require("./routes/v4/search/company.js");
@@ -233,6 +234,9 @@ Sandbox.define(
   "POST",
   v3SearchInteraction.interaction
 );
+
+// V4 activity feed
+Sandbox.define("/v4/activity-feed", "GET", v4ActivityFeed.activityFeed);
 
 // V4 CH Company
 Sandbox.define("/v4/ch-company/{companyId}", "GET", v4ChCompany.company);
