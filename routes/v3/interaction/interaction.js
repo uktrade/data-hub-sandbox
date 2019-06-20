@@ -5,6 +5,7 @@ var interactions = require('../../../fixtures/v3/interaction/interactions.json')
 var interactionByInvestmentProjectId = require('../../../fixtures/v3/interaction/interaction-by-investment-project-id.json')
 var interactionByCompanyId = require('../../../fixtures/v3/interaction/interaction-by-company-id.json')
 var interactionByContactId = require('../../../fixtures/v3/interaction/interaction-by-contact-id.json')
+var interactionCancelledMeeting = require('../../../fixtures/v3/interaction/interaction-cancelled-meeting.json')
 var interactionCreate = require('../../../fixtures/v3/interaction/interaction-create.json')
 var interactionDraftFutureMeeting = require('../../../fixtures/v3/interaction/interaction-draft-future-meeting.json')
 var interactionDraftPastMeeting = require('../../../fixtures/v3/interaction/interaction-draft-past-meeting.json')
@@ -29,6 +30,7 @@ var getInteractionById = function (req, res) {
   var interactions = {
     'ec4a46ef-6e50-4a5c-bba0-e311f0471312': interactionWithDocumentLink,
     '0dcb3748-c097-4f20-b84f-0114bbb1a8e0': interactionWithoutDocumentLink,
+    '57a0b5ea-ad56-49c9-b70e-0542153ea673': interactionCancelledMeeting,
     '999c12ee-91db-4964-908e-0f18ce823096': interactionDraftFutureMeeting,
     '888c12ee-91db-4964-908e-0f18ce823096': interactionDraftPastMeeting,
   }
