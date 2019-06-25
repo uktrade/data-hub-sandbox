@@ -13,6 +13,8 @@ var v3SearchEvent = require("./routes/v3/search/event.js");
 var v3SearchInvestmentProject = require("./routes/v3/search/investment-project.js");
 var v3SearchOrder = require("./routes/v3/search/order.js");
 var v3SearchInteraction = require("./routes/v3/search/interaction.js");
+var zendesk = require("./routes/zendesk.js");
+
 
 // V4
 var v4ActivityFeed = require("./routes/v4/activity-feed/activity-feed.js");
@@ -278,3 +280,6 @@ Sandbox.define(
 
 // Whoami endpoint
 Sandbox.define("/whoami/", "GET", user.whoami);
+
+// Zendesk endpoint
+Sandbox.define("/zendesk/announcement", "GET", zendesk.announcement);
