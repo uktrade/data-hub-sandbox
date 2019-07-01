@@ -1,4 +1,5 @@
 var now = new Date()
+now.setHours(now.getHours() - 1)
 
 exports.announcement = {  
   "count":3,
