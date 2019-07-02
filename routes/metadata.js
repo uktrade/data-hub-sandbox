@@ -176,7 +176,7 @@ exports.service = function (req, res) {
     export_service_delivery: serviceExportServiceDelivery,
   }
 
-  res.json(/*services[req.query.contexts__has_any] || */ service)
+  res.json(services[req.query.contexts__has_any] || service)
 }
 
 exports.communicationChannel = function (req, res) {
