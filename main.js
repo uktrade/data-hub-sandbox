@@ -248,6 +248,9 @@ Sandbox.define("/v4/company/{companyId}", "GET", v4Company.company);
 Sandbox.define("/v4/company/{companyId}", "PATCH", v4Company.companyPatched);
 Sandbox.define("/v4/company", "GET", v4Company.companies);
 
+Sandbox.define("/v4/user/company-list/{companyId}", "GET", v4Company.getCompanyList);
+Sandbox.define("/v4/user/company-list/{companyId}", "PUT", v4Company.addCompanyToList);
+
 // V4 Investment
 Sandbox.define(
   "/v4/large-investor-profile",

@@ -34,9 +34,8 @@ exports.largeInvestorProfilePatched = function (req, res) {
 }
 
 exports.largeInvestorProfilePostCreate = function (req, res) {
-  if (req.body.investor_company === '400094ac-f79a-43e5-9c88-059a7baa17f3')
-  {
-   return res.json(400, largeCapitalProfileCreateError)
+  if (req.body.investor_company === '400094ac-f79a-43e5-9c88-059a7baa17f3') {
+    return res.json(400, largeCapitalProfileCreateError)
   }
 
   res.json(largeCapitalProfileCreateSuccess)
@@ -68,4 +67,17 @@ exports.company = function (req, res) {
 
 exports.companyPatched = function (req, res) {
   res.json(company)
+}
+
+exports.getCompanyList = function (req, res) {
+  if (req.params.companyId === '0f5216e0-849f-11e6-ae22-56b6b6499622') {
+    return res.json(404, {})
+  } else if (req.params.companyId === '346f78a5-1d23-4213-b4c2-bf48246a13c3') {
+    return res.json(404, {})
+  }
+  res.json(204, {})
+}
+
+exports.addCompanyToList = function (req, res) {
+  res.json(204, {})
 }
