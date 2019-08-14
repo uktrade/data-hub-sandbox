@@ -29,6 +29,8 @@ Please follow the documentation below to install sandbox.
 
 6. Run `yarn run develop` and you should now be all set up
 
+7. When you make changes to the fixtures, you'll need to rebuild the docker image and then run the server again. So `CTRL` + `C` and follow steps 2 and 3 again. 
+
 ### Using sandbox on host machine
 
 1. Install sandbox, see [instructions](https://github.com/getsandbox/sandbox).
