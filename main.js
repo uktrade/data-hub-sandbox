@@ -15,6 +15,7 @@ var v3SearchOrder = require("./routes/v3/search/order.js");
 var v3SearchInteraction = require("./routes/v3/search/interaction.js");
 var zendesk = require("./routes/zendesk.js");
 
+
 // V4
 var v4ActivityFeed = require("./routes/v4/activity-feed/activity-feed.js");
 var v4ChCompany = require("./routes/v4/ch-company/company.js");
@@ -22,7 +23,6 @@ var v4Company = require("./routes/v4/company/company.js");
 var v4SearchCompany = require("./routes/v4/search/company.js");
 var v4SearchCompanyWithCountry = require("./routes/v4/search/company/autocomplete.js");
 var v4SearchLargeInvestorProfiles = require("./routes/v4/search/large-investor-profile/results.js");
-var v4CompanyList = require("./routes/v4/company-list/companyList.js");
 
 // Adviser endpoint
 Sandbox.define("/adviser/", "GET", adviser.advisers);
@@ -248,11 +248,8 @@ Sandbox.define("/v4/company/{companyId}", "GET", v4Company.company);
 Sandbox.define("/v4/company/{companyId}", "PATCH", v4Company.companyPatched);
 Sandbox.define("/v4/company", "GET", v4Company.companies);
 
-Sandbox.define(
-  "/v4/user/company-list/{companyId}",
-  "GET",
-  v4Company.getCompanyList
-);
+Sandbox.define("/v4/user/company-list/{companyId}", "GET", v4Company.getCompanyList);
+Sandbox.define("/v4/user/company-list", "GET", v4Company.getCompanyList);
 
 // V4 Investment
 Sandbox.define(
@@ -282,13 +279,6 @@ Sandbox.define(
   "/v4/search/company/autocomplete",
   "GET",
   v4SearchCompanyWithCountry.companiesAutocomplete
-);
-
-// Company list
-Sandbox.define(
-  "/v4/user/company-list",
-  "GET",
-  v4CompanyList.companyList
 );
 
 // Whoami endpoint
