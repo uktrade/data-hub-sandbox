@@ -10,6 +10,7 @@ var companyOneListCorp = require('../../../fixtures/v4/company/company-one-list-
 var companyWithInvestment1 = require('../../../fixtures/v4/company/company-with-investment-1.json')
 var companyWithInvestment2 = require('../../../fixtures/v4/company/company-with-investment-2.json')
 var companyWithContacts = require('../../../fixtures/v4/company/company-with-contacts.json')
+var companyList = require('../../../fixtures/v4/user/company-list.json')
 
 var largeCapitalProfileEmpty = require('../../../fixtures/v4/company/large-capital-profile-empty.json')
 var largeCapitalProfileNew = require('../../../fixtures/v4/company/large-capital-profile-new.json')
@@ -71,8 +72,9 @@ exports.companyPatched = function (req, res) {
 
 exports.getCompanyList = function (req, res) {
   if (req.params.companyId === '0fb3379c-341c-4da4-b825-bf8d47b26baa') {
-    res.json(204, {})
-  } else if (req.params.companyId === 'b2c34b41-1d5a-4b4b-9249-7c53ff2868dd'){
-    res.json(404, {})
+    return res.json(204, {})
+  } else if (req.params.companyId === 'b2c34b41-1d5a-4b4b-9249-7c53ff2868dd') {
+    return res.json(404, {})
   }
+  res.json(200, companyList)
 }
