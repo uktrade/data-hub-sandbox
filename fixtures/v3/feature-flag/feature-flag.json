@@ -18,9 +18,5 @@
   {
     "code": "interactions-complete-drafts",
     "is_active": true
-  },
-  {
-    "code": "add_company_to_list",
-    "is_active": true
   }
 ]
