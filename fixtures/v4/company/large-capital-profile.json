@@ -475,7 +475,16 @@
           }
         }
       ],
-      "uk_region_locations": [],
+      "uk_region_locations": [
+        {
+          "id": "874cd12a-6095-e211-a939-e4115bead28a",
+          "name": "London"
+        },
+        {
+          "id": "854cd12a-6095-e211-a939-e4115bead28a",
+          "name": "West Midlands"
+        }
+      ],
       "notes_on_locations": "Notes go here please",
       "other_countries_being_considered": []
     }
