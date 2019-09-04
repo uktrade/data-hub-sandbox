@@ -486,7 +486,12 @@
         }
       ],
       "notes_on_locations": "Notes go here please",
-      "other_countries_being_considered": []
+      "other_countries_being_considered": [
+        {
+          "id": "85756b9a-5d95-e211-a939-e4115bead28a",
+          "name": "Japan"
+        }
+      ]
     }
   ]
 }
