@@ -20,6 +20,7 @@ var helpCentre = require("./routes/helpCentre.js");
 var v4ActivityFeed = require("./routes/v4/activity-feed/activity-feed.js");
 var v4ChCompany = require("./routes/v4/ch-company/company.js");
 var v4Company = require("./routes/v4/company/company.js");
+var v4Dnb = require("./routes/v4/dnb/index.js");
 var v4SearchCompany = require("./routes/v4/search/company.js");
 var v4SearchCompanyWithCountry = require("./routes/v4/search/company/autocomplete.js");
 var v4SearchLargeInvestorProfiles = require("./routes/v4/search/large-investor-profile/results.js");
@@ -247,6 +248,10 @@ Sandbox.define("/v4/ch-company/{companyId}", "GET", v4ChCompany.company);
 Sandbox.define("/v4/company/{companyId}", "GET", v4Company.company);
 Sandbox.define("/v4/company/{companyId}", "PATCH", v4Company.companyPatched);
 Sandbox.define("/v4/company", "GET", v4Company.companies);
+
+// V4 DnB
+Sandbox.define("/v4/dnb/company-create", "POST", v4Dnb.companyCreate);
+Sandbox.define("/v4/dnb/company-search", "POST", v4Dnb.companySearch);
 
 Sandbox.define("/v4/user/company-list/{companyId}", "GET", v4Company.getCompanyList);
 Sandbox.define("/v4/user/company-list", "GET", v4Company.getCompanyList);
