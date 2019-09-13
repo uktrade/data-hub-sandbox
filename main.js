@@ -251,6 +251,7 @@ Sandbox.define("/v4/company", "GET", v4Company.companies);
 
 // V4 DnB
 Sandbox.define("/v4/dnb/company-create", "POST", v4Dnb.companyCreate);
+Sandbox.define("/v4/dnb/company-create-investigation", "POST", v4Dnb.companyCreateInvestigation);
 Sandbox.define("/v4/dnb/company-search", "POST", v4Dnb.companySearch);
 
 Sandbox.define("/v4/user/company-list/{companyId}", "GET", v4Company.getCompanyList);
