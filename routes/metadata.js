@@ -48,6 +48,7 @@ var capitalInvestmentConstructionRisks = require('../fixtures/metadata/capital-i
 var capitalInvestmentEquityPercentage = require('../fixtures/metadata/capital-investment-equity-percentage.json')
 var capitalInvestmentDesiredDealRoles = require('../fixtures/metadata/capital-investment-desired-deal-roles.json')
 var capitalInvestmentAssetClassInterest = require('../fixtures/metadata/capital-investment-asset-class-interest.json')
+var oneListTier = require('../fixtures/metadata/one-list-tier.json')
 
 exports.likelihoodToLand = function (req, res) {
     res.json(likelihoodToLand)
@@ -243,3 +244,6 @@ exports.capitalInvestmentAssetClassInterest = function (req, res) {
   res.json(capitalInvestmentAssetClassInterest)
 }
 
+exports.oneListTier = function (req, res) {
+  res.json(oneListTier)
+}

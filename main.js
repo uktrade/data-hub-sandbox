@@ -183,6 +183,11 @@ Sandbox.define(
   "GET",
   metadata.capitalInvestmentAssetClassInterest
 );
+Sandbox.define(
+  "/metadata/one-list-tier/",
+  "GET",
+  metadata.oneListTier
+);
 
 // Ping
 Sandbox.define("/ping.xml", "GET", healthcheck.ping);
