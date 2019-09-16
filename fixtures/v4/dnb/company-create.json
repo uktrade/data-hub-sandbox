@@ -27,11 +27,11 @@
   "future_interest_countries": [],
   "global_headquarters": null,
   "headquarter_type": null,
-  "id": "ca8fae21-2895-47cf-90ba-9273c94dab82",
+  "id": "ca8fae21-2895-47cf-90ba-9273c94dab92",
   "is_number_of_employees_estimated": true,
   "is_turnover_estimated": null,
   "modified_on": "2019-09-03T15:50:37.892435Z",
-  "name": "FOO BICYCLE LIMITED",
+  "name": "Some other company",
   "number_of_employees": 260,
   "one_list_group_global_account_manager": null,
   "one_list_group_tier": null,
@@ -48,5 +48,5 @@
   "uk_based": true,
   "uk_region": null,
   "vat_number": "",
-  "website": "http://foo.com"
+  "website": "http://some-other-company.com"
 }
