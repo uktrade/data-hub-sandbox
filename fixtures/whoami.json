@@ -80,6 +80,13 @@
                     "company.view_company_timeline",
                     "investment.change_iprojectdocument",
                     "interaction.export_interaction",
-                    "company_list.view_companylistitem"
+                    "company_list.view_companylist",
+                    "company_list.add_companylist",
+                    "company_list.change_companylist",
+                    "company_list.delete_companylist",
+                    "company_list.view_companylistitem",
+                    "company_list.add_companylistitem",
+                    "company_list.change_companylistitem",
+                    "company_list.delete_companylistitem"
                   ]
  }
