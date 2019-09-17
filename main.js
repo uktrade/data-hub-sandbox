@@ -20,6 +20,7 @@ var helpCentre = require("./routes/helpCentre.js");
 var v4ActivityFeed = require("./routes/v4/activity-feed/activity-feed.js");
 var v4ChCompany = require("./routes/v4/ch-company/company.js");
 var v4Company = require("./routes/v4/company/company.js");
+var v4CompanyList = require("./routes/v4/company-list/companyList.js");
 var v4Dnb = require("./routes/v4/dnb/index.js");
 var v4SearchCompany = require("./routes/v4/search/company.js");
 var v4SearchCompanyWithCountry = require("./routes/v4/search/company/autocomplete.js");
@@ -259,8 +260,13 @@ Sandbox.define("/v4/dnb/company-create", "POST", v4Dnb.companyCreate);
 Sandbox.define("/v4/dnb/company-create-investigation", "POST", v4Dnb.companyCreateInvestigation);
 Sandbox.define("/v4/dnb/company-search", "POST", v4Dnb.companySearch);
 
+// V4 legacy company list
 Sandbox.define("/v4/user/company-list/{companyId}", "GET", v4Company.getCompanyList);
 Sandbox.define("/v4/user/company-list", "GET", v4Company.getCompanyList);
+
+// V4 new company list endpoints (with multiple list support)
+Sandbox.define("/v4/company-list/{listId}", "GET", v4CompanyList.getCompanyList);
+Sandbox.define("/v4/company-list/{listId}", "DELETE", v4CompanyList.deleteCompanyList);
 
 // V4 Investment
 Sandbox.define(
