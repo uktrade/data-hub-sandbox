@@ -3,7 +3,9 @@ var companySearch = require('../../../fixtures/v4/dnb/company-search.json')
 var companyCreateInvestigation = require('../../../fixtures/v4/dnb/company-create-investigation.json')
 
 exports.companyCreate = function (req, res) {
-  res.json(companyCreate)
+  if (req.body.duns_number === '291332174') {
+    res.json(companyCreate)
+  }
 }
 
 exports.companySearch = function (req, res) {
