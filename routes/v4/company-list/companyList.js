@@ -20,6 +20,10 @@ exports.getCompanyList = function(req, res) {
   res.send(404);
 };
 
+exports.createCompanyList = function(req, res) {
+    res.send(201);
+};
+
 exports.deleteCompanyList = function(req, res) {
   if (req.params.listId === multipleItemCompanyList.id) {
     res.send(204);
