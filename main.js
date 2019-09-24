@@ -1,6 +1,7 @@
 var adviser = require("./routes/adviser.js");
 var dashboard = require("./routes/dashboard.js");
 var healthcheck = require("./routes/ping.js");
+// TODO: `/metadata/*` endpoints are deprecated and should be removed or on after 17th October 2019
 var metadata = require("./routes/metadata.js");
 var user = require("./routes/whoami.js");
 var v3Contact = require("./routes/v3/contact/contact.js");
@@ -22,6 +23,7 @@ var v4ChCompany = require("./routes/v4/ch-company/company.js");
 var v4Company = require("./routes/v4/company/company.js");
 var v4CompanyList = require("./routes/v4/company-list/companyList.js");
 var v4Dnb = require("./routes/v4/dnb/index.js");
+var v4Metadata = require('./routes/v4/metadata/index.js');
 var v4SearchCompany = require("./routes/v4/search/company.js");
 var v4SearchCompanyWithCountry = require("./routes/v4/search/company/autocomplete.js");
 var v4SearchLargeInvestorProfiles = require("./routes/v4/search/large-investor-profile/results.js");
@@ -34,6 +36,7 @@ Sandbox.define("/adviser/{id}/", "GET", adviser.singleAdviser);
 Sandbox.define("/dashboard/homepage/", "GET", dashboard.homePage);
 
 // Metadata endpoint
+// TODO: Metadata `/metadata/*` endpoints are deprecated and should be removed on or after 17th October 2019
 Sandbox.define(
   "/metadata/likelihood-to-land/",
   "GET",
@@ -189,6 +192,164 @@ Sandbox.define(
   "GET",
   metadata.oneListTier
 );
+
+// V4 Metadata endpoints
+Sandbox.define(
+  "/v4/metadata/likelihood-to-land",
+  "GET",
+  v4Metadata.likelihoodToLand
+);
+Sandbox.define(
+  "/v4/metadata/export-experience-category",
+  "GET",
+  v4Metadata.exportExperienceCategory
+);
+Sandbox.define(
+  "/v4/metadata/investment-investor-type",
+  "GET",
+  v4Metadata.investmentInvestorType
+);
+Sandbox.define(
+  "/v4/metadata/investment-involvement",
+  "GET",
+  v4Metadata.investmentInvolvement
+);
+Sandbox.define(
+  "/v4/metadata/investment-specific-programme",
+  "GET",
+  v4Metadata.investmentSpecificProgramme
+);
+Sandbox.define(
+  "/v4/metadata/investment-project-stage",
+  "GET",
+  v4Metadata.investmentProjectStage
+);
+Sandbox.define(
+  "/v4/metadata/investment-business-activity",
+  "GET",
+  v4Metadata.investmentBusinessActivity
+);
+Sandbox.define("/v4/metadata/investment-type", "GET", v4Metadata.investmentType);
+Sandbox.define(
+  "/v4/metadata/investment-strategic-driver",
+  "GET",
+  v4Metadata.investmentStrategicDriver
+);
+Sandbox.define(
+  "/v4/metadata/order-service-type",
+  "GET",
+  v4Metadata.orderServiceType
+);
+Sandbox.define(
+  "/v4/metadata/order-cancellation-reason",
+  "GET",
+  v4Metadata.orderCancellationReason
+);
+Sandbox.define("/v4/metadata/omis-market", "GET", v4Metadata.omisMarket);
+Sandbox.define("/v4/metadata/salary-range", "GET", v4Metadata.salaryRange);
+Sandbox.define("/v4/metadata/fdi-value", "GET", v4Metadata.fdiValue);
+Sandbox.define("/v4/metadata/fdi-type", "GET", v4Metadata.fdiType);
+Sandbox.define("/v4/metadata/turnover", "GET", v4Metadata.turnover);
+Sandbox.define("/v4/metadata/sector", "GET", v4Metadata.sector);
+Sandbox.define("/v4/metadata/location-type", "GET", v4Metadata.locationType);
+Sandbox.define("/v4/metadata/event-type", "GET", v4Metadata.eventType);
+Sandbox.define("/v4/metadata/programme", "GET", v4Metadata.programme);
+Sandbox.define("/v4/metadata/business-type", "GET", v4Metadata.businessType);
+Sandbox.define("/v4/metadata/evidence-tag", "GET", v4Metadata.evidenceTag);
+Sandbox.define("/v4/metadata/employee-range", "GET", v4Metadata.employeeRange);
+Sandbox.define("/v4/metadata/country", "GET", v4Metadata.country);
+Sandbox.define("/v4/metadata/uk-region", "GET", v4Metadata.ukRegion);
+Sandbox.define(
+  "/v4/metadata/referral-source-website",
+  "GET",
+  v4Metadata.referralSourceWebsite
+);
+Sandbox.define(
+  "/v4/metadata/referral-source-marketing",
+  "GET",
+  v4Metadata.referralSourceMarketing
+);
+Sandbox.define(
+  "/v4/metadata/referral-source-activity",
+  "GET",
+  v4Metadata.referralSourceActivity
+);
+Sandbox.define("/v4/metadata/headquarter-type", "GET", v4Metadata.headquarterType);
+Sandbox.define("/v4/metadata/service", "GET", v4Metadata.service);
+Sandbox.define(
+  "/v4/metadata/communication-channel",
+  "GET",
+  v4Metadata.communicationChannel
+);
+Sandbox.define("/v4/metadata/team", "GET", v4Metadata.team);
+Sandbox.define("/v4/metadata/policy-area", "GET", v4Metadata.policyArea);
+Sandbox.define("/v4/metadata/policy-issue-type", "GET", v4Metadata.policyIssueType);
+Sandbox.define(
+  "/v4/metadata/service-delivery-status",
+  "GET",
+  v4Metadata.serviceDeliveryStatus
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/investor-type",
+  "GET",
+  v4Metadata.capitalInvestmentInvestorType
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/required-checks-conducted",
+  "GET",
+  v4Metadata.capitalInvestmentRequiredChecks
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/deal-ticket-size",
+  "GET",
+  v4Metadata.capitalInvestmentDealTicketSize
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/large-capital-investment-type",
+  "GET",
+  v4Metadata.capitalInvestmentInvestmentTypes
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/return-rate",
+  "GET",
+  v4Metadata.capitalInvestmentMinimumReturnRate
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/time-horizon",
+  "GET",
+  v4Metadata.capitalInvestmentTimeHorizons
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/restriction",
+  "GET",
+  v4Metadata.capitalInvestmentRestrictions
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/construction-risk",
+  "GET",
+  v4Metadata.capitalInvestmentConstructionRisks
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/equity-percentage",
+  "GET",
+  v4Metadata.capitalInvestmentEquityPercentage
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/desired-deal-role",
+  "GET",
+  v4Metadata.capitalInvestmentDesiredDealRoles
+);
+Sandbox.define(
+  "/v4/metadata/capital-investment/asset-class-interest",
+  "GET",
+  v4Metadata.capitalInvestmentAssetClassInterest
+);
+Sandbox.define(
+  "/v4/metadata/one-list-tier",
+  "GET",
+  v4Metadata.oneListTier
+);
+
 
 // Ping
 Sandbox.define("/ping.xml", "GET", healthcheck.ping);
