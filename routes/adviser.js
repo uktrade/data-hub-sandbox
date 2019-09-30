@@ -1,5 +1,5 @@
-var advisers = require('../fixtures/adviser.json')
-var autoCompleteAdvisor = require('../fixtures/autocomplete-adviser.json')
+var advisers = require('../fixtures/adviser-list.json')
+var autoCompleteAdvisor = require('../fixtures/autocomplete-adviser-list.json')
 var singleAdviser = require('../fixtures/single-adviser.json')
 
 exports.advisers = function (req, res) {
