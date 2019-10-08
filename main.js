@@ -426,6 +426,7 @@ Sandbox.define("/v4/user/company-list/{companyId}", "GET", v4Company.getCompanyL
 Sandbox.define("/v4/user/company-list", "GET", v4Company.getCompanyList);
 
 // V4 new company list endpoints (with multiple list support)
+Sandbox.define("/v4/company-list", "GET", v4CompanyList.getCompanyLists);
 Sandbox.define("/v4/company-list/{listId}", "GET", v4CompanyList.getCompanyList);
 Sandbox.define("/v4/company-list", "POST", v4CompanyList.createCompanyList);
 Sandbox.define("/v4/company-list/{listId}", "DELETE", v4CompanyList.deleteCompanyList);
