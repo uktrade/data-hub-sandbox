@@ -18,5 +18,9 @@
   {
     "code": "interactions-complete-drafts",
     "is_active": true
+  },
+  {
+    "code": "companies_add_remove_from_lists",
+    "is_active": true
   }
 ]
