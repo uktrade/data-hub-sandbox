@@ -1,9 +1,14 @@
 var companyList = require("../../../fixtures/v4/company-list/company-list.json");
+var companyLists = require("../../../fixtures/v4/company-list/company-lists.json");
 var multipleItemCompanyList = require("../../../fixtures/v4/company-list/single-list-with-multiple-items.json");
 var errorOnDeleteCompanyList = require("../../../fixtures/v4/company-list/single-list-with-error-on-delete.json");
 
 exports.companyList = function(req, res) {
   res.json(companyList);
+};
+
+exports.getCompanyLists = function(req, res) {
+  res.json(companyLists);
 };
 
 exports.getCompanyList = function(req, res) {
