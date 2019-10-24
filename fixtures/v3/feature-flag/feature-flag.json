@@ -22,5 +22,9 @@
   {
     "code": "companies_add_remove_from_lists",
     "is_active": true
+  },
+  {
+    "code": "companies-ultimate-hq",
+    "is_active": false
   }
 ]
