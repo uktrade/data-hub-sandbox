@@ -5,6 +5,7 @@ var companyArchived = require('../../../fixtures/v4/company/company-archived.jso
 var companyDnBCorp = require('../../../fixtures/v4/company/company-dnb-corp.json')
 var companyDnBLtd = require('../../../fixtures/v4/company/company-dnb-ltd.json')
 var companyDnBGlobalUltimate = require('../../../fixtures/v4/company/company-dnb-global-ultimate.json')
+var companyDnBGlobalUltimateSubsidiaries = require('../../../fixtures/v4/company/company-dnb-global-ultimate-subsidaries.json')
 var companyInvestigationLtd = require('../../../fixtures/v4/company/company-investigation-ltd.json')
 var companyLambdaPlc = require('../../../fixtures/v4/company/company-lambda-plc.json')
 var companyMarsExportsLtd = require('../../../fixtures/v4/company/company-mars-exports-ltd.json')
@@ -49,9 +50,16 @@ exports.largeInvestorProfilePostCreate = function (req, res) {
 exports.companies = function (req, res) {
   var subsidiaries = {
     '346f78a5-1d23-4213-b4c2-bf48246a13c3': companyArchivedSubsidiaries,
+    '079942718': companyDnBGlobalUltimateSubsidiaries,
   }
 
-  res.json(subsidiaries[req.query.global_headquarters_id] || companiesNoResults)
+  if (req.query.global_headquarters_id) {
+    res.json(subsidiaries[req.query.global_headquarters_id])
+  } else if (req.query.global_ultimate_duns_number) {
+    res.json(subsidiaries[req.query.global_ultimate_duns_number])
+  } else {
+    res.json(companiesNoResults)
+  }
 }
 
 exports.company = function (req, res) {
@@ -59,7 +67,7 @@ exports.company = function (req, res) {
     '346f78a5-1d23-4213-b4c2-bf48246a13c3': companyArchived,
     'cc7e2f19-7251-4a41-a27a-f98437720531': companyDnBCorp,
     's07e2f19-8251-1a41-h27a-f98737520831': companyDnBLtd,
-    'e72e4g28-5250-3a51-j26a-g87617520879': companyDnBGlobalUltimate,
+    'd27bde24-6330-464b-a48c-0394831586fd': companyDnBGlobalUltimate,
     'ca8fae21-2895-47cf-90ba-9273c94dab81': companyInvestigationLtd,
     '0fb3379c-341c-4da4-b825-bf8d47b26baa': companyLambdaPlc,
     'b2c34b41-1d5a-4b4b-9249-7c53ff2868dd': companyMarsExportsLtd,
