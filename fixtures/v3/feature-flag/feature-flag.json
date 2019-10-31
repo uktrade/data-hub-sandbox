@@ -26,5 +26,9 @@
   {
     "code": "companies-ultimate-hq",
     "is_active": true
+  },
+  {
+    "code": "lead_advisers",
+    "is_active": true
   }
 ]
