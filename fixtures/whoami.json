@@ -87,6 +87,7 @@
                     "company_list.view_companylistitem",
                     "company_list.add_companylistitem",
                     "company_list.change_companylistitem",
-                    "company_list.delete_companylistitem"
+                    "company_list.delete_companylistitem",
+                    "company.change_regional_account_manager"
                   ]
  }
