@@ -22,15 +22,25 @@ var largeCapitalProfileNew = require('../../../fixtures/v4/company/large-capital
 var largeCapitalProfile = require('../../../fixtures/v4/company/large-capital-profile.json')
 var largeCapitalProfileCreateError = require('../../../fixtures/v4/company/large-capital-profile-post-create-error.json')
 var largeCapitalProfileCreateSuccess = require('../../../fixtures/v4/company/large-capital-profile-post-create-success.json')
+var largeCapitalProfileList10 = require('../../../fixtures/v4/investment/large-capital-profile-list10.json')
+var largeCapitalProfileList20 = require('../../../fixtures/v4/investment/large-capital-profile-list20.json')
 
 state.investor_description = state.investor_description || ''
 
 exports.largeInvestorProfile = function (req, res) {
+  console.log(req.query.offset)
+  console.log(req)
   if (req.query.investor_company_id === companyOneListCorp.id) {
     return res.json(largeCapitalProfile)
   }
   if (req.query.investor_company_id === companyLambdaPlc.id) {
     return res.json(largeCapitalProfileNew)
+  }
+  if (req.query.investor_company_id === undefined && req.query.offset === "10") {
+    return res.json(largeCapitalProfileList20)
+  }
+  if (req.query.investor_company_id === undefined && req.query.offset === "0") {
+    return res.json(largeCapitalProfileList10)
   }
   res.json(largeCapitalProfileEmpty)
 }
