@@ -5,6 +5,7 @@ var companyArchived = require('../../../fixtures/v4/company/company-archived.jso
 var companyDnBCorp = require('../../../fixtures/v4/company/company-dnb-corp.json')
 var companyDnBLtd = require('../../../fixtures/v4/company/company-dnb-ltd.json')
 var companyDnBGlobalUltimate = require('../../../fixtures/v4/company/company-dnb-global-ultimate.json')
+var companyDnBGlobalUltimateAndGlobalHq = require('../../../fixtures/v4/company/company-dnb-global-ultimate-and-global-hq.json')
 var companyDnBGlobalUltimateSubsidiaries = require('../../../fixtures/v4/company/company-dnb-global-ultimate-subsidaries.json')
 var companyInvestigationLtd = require('../../../fixtures/v4/company/company-investigation-ltd.json')
 var companyLambdaPlc = require('../../../fixtures/v4/company/company-lambda-plc.json')
@@ -79,6 +80,7 @@ exports.company = function (req, res) {
     'cc7e2f19-7251-4a41-a27a-f98437720531': companyDnBCorp,
     's07e2f19-8251-1a41-h27a-f98737520831': companyDnBLtd,
     'd27bde24-6330-464b-a48c-0394831586fd': companyDnBGlobalUltimate,
+    '0418f79f-154b-4f55-85a6-8ddad559663e': companyDnBGlobalUltimateAndGlobalHq,
     'ca8fae21-2895-47cf-90ba-9273c94dab81': companyInvestigationLtd,
     '0fb3379c-341c-4da4-b825-bf8d47b26baa': companyLambdaPlc,
     'b2c34b41-1d5a-4b4b-9249-7c53ff2868dd': companyMarsExportsLtd,
@@ -91,7 +93,11 @@ exports.company = function (req, res) {
     'w2c34b41-1d5a-4b4b-7685-7c53ff2868dg': companyOneListTierDIta,
   }
 
-  res.json(companies[req.params.companyId] || company)
+  if (companies[req.params.companyId]) {
+    res.json(companies[req.params.companyId])
+  } else {
+    res.json(404, {})
+  }
 }
 
 exports.companyPatched = function (req, res) {
