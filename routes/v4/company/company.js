@@ -94,11 +94,7 @@ exports.company = function (req, res) {
     'w2c34b41-1d5a-4b4b-7685-7c53ff2868dg': companyOneListTierDIta,
   }
 
-  if (companies[req.params.companyId]) {
-    res.json(companies[req.params.companyId])
-  } else {
-    res.json(404, {})
-  }
+  res.json(companies[req.params.companyId] || company)
 }
 
 exports.companyPatched = function (req, res) {
