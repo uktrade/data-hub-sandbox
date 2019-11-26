@@ -37,10 +37,10 @@
   },
   {
     "code": "companies-ultimate-hq",
-    "is_active": true
+    "is_active": false
   },
   {
     "code": "activity-feed-type-filter-enabled",
-    "is_active": true
+    "is_active": false
   }
 ]
