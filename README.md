@@ -1,6 +1,6 @@
 # Deprecated!
 
-Instead, use https://github.com/uktrade/data-hub-frontend/tree/develop/test/sandbox
+Instead, use https://github.com/uktrade/data-hub-frontend/tree/master/test/sandbox
 
 Documentation
 ====================
